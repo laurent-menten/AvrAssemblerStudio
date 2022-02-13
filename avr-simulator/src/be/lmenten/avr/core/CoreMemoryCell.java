@@ -356,7 +356,7 @@ public abstract class CoreMemoryCell
 	 * Get the data of this memory cell. This method may trigger AccessEvent.
 	 * It is not intended to be used by drivers.
 	 *
-	 * @return
+	 * @return the value
 	 */
 	@Override
 	public Value getValue()
@@ -519,7 +519,7 @@ public abstract class CoreMemoryCell
 	}
 
 	/**
-	 * Record an execute access.
+	 * Record a execute access.
 	 * 
 	 * @param core the executing core
 	 * @param instruction the instruction executed
@@ -614,10 +614,7 @@ public abstract class CoreMemoryCell
 	 */
 	public void removeDriverAccessListener( AccessEventListener listener )
 	{
-		if( driversAccessEventListeners.contains( listener ) )
-		{
-			driversAccessEventListeners.remove( listener );
-		}
+		driversAccessEventListeners.remove( listener );
 	}
 
 	/**
@@ -656,10 +653,7 @@ public abstract class CoreMemoryCell
 	 */
 	public void removeAccessListener( AccessEventListener listener )
 	{
-		if( accessEventListeners.contains( listener ) )
-		{
-			accessEventListeners.remove( listener );
-		}
+		accessEventListeners.remove( listener );
 	}
 
 	/**

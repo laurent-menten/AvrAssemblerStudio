@@ -20,14 +20,8 @@ package be.lmenten.avr.core.instruction;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.Map.Entry;
-import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -601,7 +595,7 @@ public enum InstructionSet
 	private static final List<InstructionSet> disassemblerList
 		= new ArrayList<>();
 
-	private static int maxMnemonicLenght
+	private static int maxMnemonicLength
 		= 0;
 
 	private static boolean isInitialized
@@ -629,17 +623,17 @@ public enum InstructionSet
 	private String description;
 	private String remark;
 
-	private Map<OperandType,Integer> operandMasks
+	private final Map<OperandType,Integer> operandMasks
 		= new HashMap<>();
 
-	private Set<CoreVersion> versionSpecific
+	private final Set<CoreVersion> versionSpecific
 		= new HashSet<>();
 
 	// ========================================================================
 	// = CONSTRUCTOR ==========================================================
 	// ========================================================================
 
-	private InstructionSet( Class<? extends Instruction> clazz )
+	InstructionSet( Class<? extends Instruction> clazz )
 	{
 		this.clazz = clazz;
 
@@ -737,7 +731,7 @@ public enum InstructionSet
 
 	/**
 	 * 
-	 * @return
+	 * @return the operands set
 	 */
 	public Set<Entry<OperandType, Integer>> getOperands()
 	{
@@ -746,7 +740,7 @@ public enum InstructionSet
 
 	/**
 	 * Extract the value of an operand from an opcode. If the operand bits
-	 * are scattered through the opcode, they will be packed into an usable
+	 * are scattered through the opcode, they will be packed into a usable
 	 * value.
 	 * 
 	 * @param type the type of the operand to extract
@@ -829,7 +823,7 @@ public enum InstructionSet
 	 */
 	public static synchronized void init()
 	{
-		if( isInitialized != false )
+		if( isInitialized )
 		{
 			LOG.warning( "InstructionSet is already initialised !" );
 
@@ -854,6 +848,16 @@ public enum InstructionSet
 			}
 
 			// --------------------------------------------------------------------
+			// - Set max mnemonic length ------------------------------------------
+			// --------------------------------------------------------------------
+
+			int sz = instruction.name().length();
+			if( sz > maxMnemonicLength )
+			{
+				maxMnemonicLength = sz;
+			}
+
+			// --------------------------------------------------------------------
 			// Get InstructionDescriptor annotation (mandatory).
 			// --------------------------------------------------------------------
 
@@ -873,10 +877,7 @@ public enum InstructionSet
 
 			instruction.rawStatusRegister = opcode.statusRegister();
 
-			for( CoreVersion coreVersion : opcode.coreVersionSpecific() )
-			{
-				instruction.versionSpecific.add( coreVersion );
-			}
+			instruction.versionSpecific.addAll( Arrays.asList( opcode.coreVersionSpecific() ) );
 
 			// --------------------------------------------------------------------
 
@@ -911,33 +912,29 @@ public enum InstructionSet
 		// count) and opcode mask value.
 		// --------------------------------------------------------------------
 
-		Comparator<InstructionSet> comparator = new Comparator<InstructionSet>()
+		Comparator<InstructionSet> comparator = ( o1, o2 ) ->
 		{
-			@Override
-			public int compare( InstructionSet o1, InstructionSet o2 )
+			if( o1.opcodeMaskSize == o2.opcodeMaskSize )
 			{
-				if( o1.opcodeMaskSize == o2.opcodeMaskSize )
+				if( o1.opcodeMaskValue == o2.opcodeMaskValue )
 				{
-					if( o1.opcodeMaskValue == o2.opcodeMaskValue )
-					{
-						return 0;
-					}
-
-					if( o1.opcodeMaskValue < o2.opcodeMaskValue )
-					{
-						return 1;
-					}
-
-					return -1;
+					return 0;
 				}
 
-				if( o1.opcodeMaskSize < o2.opcodeMaskSize )
+				if( o1.opcodeMaskValue < o2.opcodeMaskValue )
 				{
 					return 1;
 				}
 
 				return -1;
 			}
+
+			if( o1.opcodeMaskSize < o2.opcodeMaskSize )
+			{
+				return 1;
+			}
+
+			return -1;
 		};
 
 		LOG.log( Level.FINE, "Sorting opcode list ({0} entries)", disassemblerList.size() );
@@ -1082,7 +1079,7 @@ public enum InstructionSet
 
 	public static int getMaxMnemonicLength()
 	{
-		return maxMnemonicLenght;
+		return maxMnemonicLength;
 	}
 
 	// ------------------------------------------------------------------------
@@ -1171,7 +1168,7 @@ public enum InstructionSet
 
 	/**
 	 * 
-	 * @return
+	 * @return true if there is an alias
 	 */
 	public boolean hasAlias()
 	{
@@ -1180,7 +1177,7 @@ public enum InstructionSet
 
 	/**
 	 * 
-	 * @return
+	 * @return the alias
 	 */
 	public String getAlias()
 	{
@@ -1191,7 +1188,7 @@ public enum InstructionSet
 
 	/**
 	 * 
-	 * @return
+	 * @return the syntax
 	 */
 	public String getSyntax()
 	{
@@ -1200,7 +1197,7 @@ public enum InstructionSet
 
 	/**
 	 * 
-	 * @return
+	 * @return the description
 	 */
 	public String getDescription()
 	{
@@ -1209,7 +1206,7 @@ public enum InstructionSet
 
 	/**
 	 * 
-	 * @return
+	 * @return the remark
 	 */
 	public String getRemark()
 	{

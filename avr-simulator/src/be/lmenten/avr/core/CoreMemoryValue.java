@@ -497,7 +497,7 @@ public abstract class CoreMemoryValue
 	public class Value
 			extends CoreMemoryValue
 	{
-		private int dataWidth;
+		private final int dataWidth;
 
 		// ====================================================================
 		// = Constructor(s) ===================================================
@@ -534,7 +534,7 @@ public abstract class CoreMemoryValue
 		{
 			if( bit(dataWidth - 1) )
 			{
-				data |= ~((1 << dataWidth) - 1);
+				data |= -(1 << dataWidth);
 			}
 		}
 
@@ -566,13 +566,13 @@ public abstract class CoreMemoryValue
 
 		public interface UnaryOperation
 		{
-			public int compute( int value1 );
-		};
+			int compute( int value1 );
+		}
 
 		/**
 		 *
-		 * @param operation
-		 * @return
+		 * @param operation what to do
+		 * @return the computed value
 		 */
 		public Value compute( UnaryOperation operation )
 		{
@@ -583,14 +583,14 @@ public abstract class CoreMemoryValue
 
 		public interface BinaryOperation
 		{
-			public int compute( int value1, int value2 );
-		};
+			int compute( int value1, int value2 );
+		}
 
 		/**
 		 *
-		 * @param operation
-		 * @param operand
-		 * @return
+		 * @param operation what to do
+		 * @param operand the other value
+		 * @return the computed value
 		 */
 		public Value compute( BinaryOperation operation, CoreMemoryValue operand )
 		{
@@ -601,21 +601,21 @@ public abstract class CoreMemoryValue
 
 		public interface BinaryOperationWithCarry
 		{
-			public int compute( int value1, int value2, int c );
-		};
+			int compute( int value1, int value2, int c );
+		}
 
 		/**
 		 *
-		 * @param operation
-		 * @param operand
+		 * @param operation what to do
+		 * @param operand the other value
 		 * @param c carry flag value
-		 * @return
+		 * @return the computed value
 		 */
 		public Value compute( BinaryOperationWithCarry operation, CoreMemoryValue operand, boolean c )
 		{
 			return new Value( operation.compute( data, operand.data, c ? 1 : 0 ), getDataWidth() );
 		}
-	};
+	}
 
 	// ========================================================================
 	// === Object =============================================================
