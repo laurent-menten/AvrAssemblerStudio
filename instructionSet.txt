@@ -1,0 +1,605 @@
+ mnem.    opc.    mask   sz.   structure              sreg     description 
+--------+-------+------+-----+----------------------+--------+-------------
+    ADC   0x1C00 0xFC00 ( 6) : 0001 11rd dddd rrrr   --****** Add with carry
+          d : 0x01F0
+          r : 0x020F
+    ADD   0x0C00 0xFC00 ( 6) : 0000 11rd dddd rrrr   --****** Add without carry
+          d : 0x01F0
+          r : 0x020F
+   ADIW   0x9600 0xFF00 ( 8) : 1001 0110 KKdd KKKK   ---***** Add immediate to word
+          d : 0x0030
+          K : 0x00CF
+    AND   0x2000 0xFC00 ( 6) : 0010 00rd dddd rrrr   ---*0**- Logical AND
+          d : 0x01F0
+          r : 0x020F
+   ANDI   0x7000 0xF000 ( 4) : 0111 KKKK dddd KKKK   ---*0**- Logical AND with immediate
+          d : 0x00F0
+          K : 0x0F0F
+    ASR   0x9405 0xFE0F (11) : 1001 010d dddd 0101   ---***** Arithmetic shift right (Effectively divides a signed value by 2 without changing its sign)
+          d : 0x01F0
+   BCLR   0x9488 0xFF8F (13) : 1001 0100 1sss 1000   ???????? Bit clear in SREG
+          s : 0x0070
+    BLD   0xF800 0xFE08 ( 8) : 1111 100d dddd 0bbb   -------- Bit load from T flag in SREG to bit in register
+          d : 0x01F0
+          b : 0x0007
+   BRBC   0xF400 0xFC00 ( 6) : 1111 01kk kkkk ksss   -------- Branch is bit in SREG is cleared
+          s : 0x0007
+          k : 0x03F8
+   BRBS   0xF000 0xFC00 ( 6) : 1111 00kk kkkk ksss   -------- Branch is bit in SREG is set
+          s : 0x0007
+          k : 0x03F8
+  BREAK   0x9598 0xFFFF (16) : 1001 0101 1001 1000   -------- Set device in STOPPED mode for On-chip Debug system
+   BRCC A 0xF400 0xFC07 ( 9) : 1111 01kk kkkk k000   -------- Branch if carry is cleared
+          k : 0x03F8
+   BRCS A 0xF000 0xFC07 ( 9) : 1111 00kk kkkk k000   -------- Branch if carry is set
+          k : 0x03F8
+   BREQ A 0xF001 0xFC07 ( 9) : 1111 00kk kkkk k001   -------- Branch if equal
+          k : 0x03F8
+   BRGE A 0xF404 0xFC07 ( 9) : 1111 01kk kkkk k100   -------- Branch if greater or equal (signed)
+          k : 0x03F8
+   BRHC A 0xF405 0xFC07 ( 9) : 1111 01kk kkkk k101   -------- Branch if half carry flag cleared
+          k : 0x03F8
+   BRHS A 0xF005 0xFC07 ( 9) : 1111 00kk kkkk k101   -------- Branch if half carry flag set
+          k : 0x03F8
+   BRID A 0xF407 0xFC07 ( 9) : 1111 01kk kkkk k111   -------- Branch if global interrupt is disabled
+          k : 0x03F8
+   BRIE A 0xF007 0xFC07 ( 9) : 1111 00kk kkkk k111   -------- Branch if global interrupt is enabled
+          k : 0x03F8
+   BRLO A 0xF000 0xFC07 ( 9) : 1111 00kk kkkk k000   -------- Branch if lower (unsigned)
+          k : 0x03F8
+   BRLT A 0xF004 0xFC07 ( 9) : 1111 00kk kkkk k100   -------- Branch if less than (signed)
+          k : 0x03F8
+   BRMI A 0xF002 0xFC07 ( 9) : 1111 00kk kkkk k010   -------- Branch if minus
+          k : 0x03F8
+   BRNE A 0xF401 0xFC07 ( 9) : 1111 01kk kkkk k001   -------- Branch if not equal
+          k : 0x03F8
+   BRPL A 0xF402 0xFC07 ( 9) : 1111 01kk kkkk k010   -------- Branch if plus
+          k : 0x03F8
+   BRSH A 0xF400 0xFC07 ( 9) : 1111 01kk kkkk k000   -------- Branch if same or higher (unsigned)
+          k : 0x03F8
+   BRTC A 0xF406 0xFC07 ( 9) : 1111 01kk kkkk k110   -------- Branch if T flag is cleared
+          k : 0x03F8
+   BRTS A 0xF006 0xFC07 ( 9) : 1111 00kk kkkk k110   -------- Branch if T flag is set
+          k : 0x03F8
+   BRVC A 0xF403 0xFC07 ( 9) : 1111 01kk kkkk k011   -------- Branch if overflow flag is cleared
+          k : 0x03F8
+   BRVS A 0xF003 0xFC07 ( 9) : 1111 00kk kkkk k011   -------- Branch if overflow flag is set
+          k : 0x03F8
+   BSET   0x9408 0xFF8F (13) : 1001 0100 0sss 1000   ???????? Bit set in SREG
+          s : 0x0070
+    BST   0xFA00 0xFE08 ( 8) : 1111 101r rrrr 0bbb   -------- Bit store from bit in register to T flag in SREG
+          b : 0x0007
+          r : 0x01F0
+   CALL   0x940E 0xFE0E (10) : 1001 010k kkkk 111k + -------- Long call to a subroutine
+          k : 0x01F1
+    CBI   0x9800 0xFF00 ( 8) : 1001 1000 AAAA Abbb   -------- Clear bit in I/O register
+          b : 0x0007
+          A : 0x00F8
+    CBR A 0x7000 0xF000 ( 4) : 0111 KKKK dddd KKKK   ---*0**- Clear bits in register
+          d : 0x00F0
+          K : 0x0F0F
+    CLC A 0x9488 0xFFFF (16) : 1001 0100 1000 1000   -------0 Clear carry flag
+    CLH A 0x94D8 0xFFFF (16) : 1001 0100 1101 1000   --0----- Clear half carry flag
+    CLI A 0x94F8 0xFFFF (16) : 1001 0100 1111 1000   0------- Clear global interrupt flag
+    CLN A 0x94A8 0xFFFF (16) : 1001 0100 1010 1000   -----0-- Clear negative flag
+    CLR A 0x2400 0xFC00 ( 6) : 0010 01rd dddd rrrr   ---0001* Clear register
+          d : 0x01F0
+          r : 0x020F
+    CLS A 0x94C8 0xFFFF (16) : 1001 0100 1100 1000   ---0---- Clear sign flag
+    CLT A 0x94E8 0xFFFF (16) : 1001 0100 1110 1000   -0------ Clear T flag
+    CLV A 0x94B8 0xFFFF (16) : 1001 0100 1011 1000   ----0--- Clear overflow flag
+    CLZ A 0x9498 0xFFFF (16) : 1001 0100 1001 1000   ------0- Clear zero flag
+    COM   0x9400 0xFE0F (11) : 1001 010d dddd 0000   ---*0**1 One's complement
+          d : 0x01F0
+     CP   0x1400 0xFC00 ( 6) : 0001 01rd dddd rrrr   --****** Compare
+          d : 0x01F0
+          r : 0x020F
+    CPC   0x0400 0xFC00 ( 6) : 0000 01rd dddd rrrr   --****** Compare with carry
+          d : 0x01F0
+          r : 0x020F
+    CPI   0x3000 0xF000 ( 4) : 0011 KKKK dddd KKKK   --****** Compare with immediate
+          d : 0x00F0
+          K : 0x0F0F
+   CPSE   0x1000 0xFC00 ( 6) : 0001 00rd dddd rrrr   -------- Compare and skip if equal
+          d : 0x01F0
+          r : 0x020F
+    DEC   0x940A 0xFE0F (11) : 1001 010d dddd 1010   ---****- Decrement
+          d : 0x01F0
+    DES   0x940B 0xFF0F (12) : 1001 0100 KKKK 1011   -------- DataInstruction Encryption Standard
+          K : 0x00F0
+ EICALL   0x9519 0xFFFF (16) : 1001 0101 0001 1001   -------- Extended indirect call to subroutine
+  EIJMP   0x9419 0xFFFF (16) : 1001 0100 0001 1001   -------- Extended indirect jump
+   ELPM   0x95D8 0xFFFF (16) : 1001 0101 1101 1000   -------- Extended load program memory (from PS(RAMPZ:Z) to R0)
+ELPM_Rd   0x9006 0xFE0E (10) : 1001 000d dddd 011x   -------- Extended load program memory (from PS(RAMPZ:Z) to Rd)
+          d : 0x01F0
+          x : 0x0001
+    EOR   0x2400 0xFC00 ( 6) : 0010 01rd dddd rrrr   ---*0**- Logical exclusive OR
+          d : 0x01F0
+          r : 0x020F
+   FMUL   0x0308 0xFF88 (10) : 0000 0011 0ddd 1rrr   ------** Fractional multiply unsigned
+          d : 0x0070
+          r : 0x0007
+  FMULS   0x0380 0xFF88 (10) : 0000 0011 1ddd 0rrr   ------** Fractional multiply signed
+          d : 0x0070
+          r : 0x0007
+ FMULSU   0x0388 0xFF88 (10) : 0000 0011 1ddd 1rrr   ------** Fractional multiply signed with unsigned
+          d : 0x0070
+          r : 0x0007
+  ICALL   0x9509 0xFFFF (16) : 1001 0101 0000 1001   -------- Indirect call to subroutine
+   IJMP   0x9409 0xFFFF (16) : 1001 0100 0000 1001   -------- Indirect jump
+     IN   0xB000 0xF800 ( 5) : 1011 0AAd dddd AAAA   -------- Load an I/O location to register
+          d : 0x01F0
+          A : 0x060F
+    INC   0x9403 0xFE0F (11) : 1001 010d dddd 0011   ---****- Increment
+          d : 0x01F0
+    JMP   0x940C 0xFE0E (10) : 1001 010k kkkk 110k + -------- Long jump
+          k : 0x01F1
+    LAC   0x9206 0xFE0F (11) : 1001 001d dddd 0110   -------- Load and clear
+          d : 0x01F0
+    LAS   0x9205 0xFE0F (11) : 1001 001d dddd 0101   -------- Load and set
+          d : 0x01F0
+    LAT   0x9207 0xFE0F (11) : 1001 001d dddd 0111   -------- Load and toggle
+          d : 0x01F0
+     LD A 0x9000 0xFE00 ( 7) : 1001 000d dddd rrrr   -------- Load indirect from data space using index
+          d : 0x01F0
+          r : 0x000F
+   LD_X   0x900C 0xFE0F (11) : 1001 000d dddd 1100   -------- Load indirect from data space using index X
+          d : 0x01F0
+  LD_mX   0x900E 0xFE0F (11) : 1001 000d dddd 1110   -------- Load indirect from data space using index X pre-decremented
+          d : 0x01F0
+  LD_Xp   0x900D 0xFE0F (11) : 1001 000d dddd 1101   -------- Load indirect from data space using index X post-incremented
+          d : 0x01F0
+  LD_mY   0x900A 0xFE0F (11) : 1001 000d dddd 1010   -------- Load indirect from data space using index Y pre-decremented
+          d : 0x01F0
+  LD_Yp   0x9009 0xFE0F (11) : 1001 000d dddd 1001   -------- Load indirect from data space using index Y post-incremented
+          d : 0x01F0
+  LD_mZ   0x9002 0xFE0F (11) : 1001 000d dddd 0010   -------- Load indirect from data space using index Z pre-decremented
+          d : 0x01F0
+  LD_Zp   0x9001 0xFE0F (11) : 1001 000d dddd 0001   -------- Load indirect from data space using index Z post-incremented
+          d : 0x01F0
+    LDD   0x8000 0xD200 ( 4) : 10q0 qq0d dddd rqqq   -------- Load indirect from data space using index
+          q : 0x2C07
+          d : 0x01F0
+          r : 0x0008
+    LDI   0xE000 0xF000 ( 4) : 1110 KKKK dddd KKKK   -------- Load immediate
+          d : 0x00F0
+          K : 0x0F0F
+  LDS16   0xA000 0xF800 ( 5) : 1010 0kkk dddd kkkk   -------- Load direct
+          d : 0x00F0
+          k : 0x070F
+    LDS   0x9000 0xFE0F (11) : 1001 000d dddd 0000 + -------- Load direct
+          d : 0x01F0
+    LPM   0x95C8 0xFFFF (16) : 1001 0101 1100 1000   -------- Load program memory (from PS(Z) to R0)
+ LPM_Rd   0x9004 0xFE0E (10) : 1001 000d dddd 010x   -------- Load program memory (from PS(Z) to Rd)
+          d : 0x01F0
+          x : 0x0001
+    LSL A 0x0C00 0xFC00 ( 6) : 0000 11rd dddd rrrr   --****** Logical shift left
+          d : 0x01F0
+          r : 0x020F
+    LSR   0x9406 0xFE0F (11) : 1001 010d dddd 0110   ---**0** Logical shift right
+          d : 0x01F0
+    MOV   0x2C00 0xFC00 ( 6) : 0010 11rd dddd rrrr   -------- Copy register
+          d : 0x01F0
+          r : 0x020F
+   MOVW   0x0100 0xFF00 ( 8) : 0000 0001 dddd rrrr   -------- Copy register word
+          d : 0x00F0
+          r : 0x000F
+    MUL   0x9C00 0xFC00 ( 6) : 1001 11rd dddd rrrr   -------- Multiply (unsigned)
+          d : 0x01F0
+          r : 0x020F
+   MULS   0x0200 0xFF00 ( 8) : 0000 0010 dddd rrrr   -------- Multiply (signed)
+          d : 0x00F0
+          r : 0x000F
+  MULSU   0x0300 0xFF88 (10) : 0000 0011 0ddd 0rrr   -------- Multiply (signed with unsigned)
+          d : 0x0070
+          r : 0x0007
+    NEG   0x9401 0xFE0F (11) : 1001 010d dddd 0001   -------- Two's complement (negate)
+          d : 0x01F0
+    NOP   0x0000 0xFFFF (16) : 0000 0000 0000 0000   -------- No operation
+     OR   0x2800 0xFC00 ( 6) : 0010 10rd dddd rrrr   ---*0**- Logical OR
+          d : 0x01F0
+          r : 0x020F
+    ORI   0x6000 0xF000 ( 4) : 0110 KKKK dddd KKKK   ---*0**- Logical OR with immediate
+          d : 0x00F0
+          K : 0x0F0F
+    OUT   0xB800 0xF800 ( 5) : 1011 1AAr rrrr AAAA   -------- Store register to I/O location
+          r : 0x01F0
+          A : 0x060F
+    POP   0x900F 0xFE0F (11) : 1001 000d dddd 1111   -------- Pop register from stack
+          d : 0x01F0
+   PUSH   0x920F 0xFE0F (11) : 1001 001r rrrr 1111   -------- Push register onto stack
+          r : 0x01F0
+  RCALL   0xD000 0xF000 ( 4) : 1101 kkkk kkkk kkkk   -------- Relative call to subroutine
+          k : 0x0FFF
+    RET   0x9508 0xFFFF (16) : 1001 0101 0000 1000   -------- Return from subroutine
+   RETI   0x9518 0xFFFF (16) : 1001 0101 0001 1000   -------- Return from interrupt service routine
+   RJMP   0xC000 0xF000 ( 4) : 1100 kkkk kkkk kkkk   -------- Relative jump
+          k : 0x0FFF
+    ROL A 0x1C00 0xFC00 ( 6) : 0001 11rd dddd rrrr   --****** Rotate left through carry
+          d : 0x01F0
+          r : 0x020F
+    ROR   0x9407 0xFE0F (11) : 1001 010d dddd 0111   ---***** Rotate right through carry
+          d : 0x01F0
+    SBC   0x0800 0xFC00 ( 6) : 0000 10rd dddd rrrr   --****** Subtract with carry
+          d : 0x01F0
+          r : 0x020F
+   SBCI   0x4000 0xF000 ( 4) : 0100 KKKK dddd KKKK   --****** Subtract immediate with carry
+          d : 0x00F0
+          K : 0x0F0F
+    SBI   0x9A00 0xFF00 ( 8) : 1001 1010 AAAA Abbb   -------- Set bit in I/O register
+          b : 0x0007
+          A : 0x00F8
+   SBIC   0x9900 0xFF00 ( 8) : 1001 1001 AAAA Abbb   -------- Skip if bit in I/O register cleared
+          b : 0x0007
+          A : 0x00F8
+   SBIS   0x9B00 0xFF00 ( 8) : 1001 1011 AAAA Abbb   -------- Skip if bit in I/O register set
+          b : 0x0007
+          A : 0x00F8
+   SBIW   0x9700 0xFF00 ( 8) : 1001 0111 KKdd KKKK   ---***** Subrtact immediate from word
+          d : 0x0030
+          K : 0x00CF
+    SBR A 0x6000 0xF000 ( 4) : 0110 KKKK dddd KKKK   ---*0**- Set bits in register
+          d : 0x00F0
+          K : 0x0F0F
+   SBRC   0xFC00 0xFE08 ( 8) : 1111 110r rrrr 0bbb   -------- Skip if bit in register is cleared
+          b : 0x0007
+          r : 0x01F0
+   SBRS   0xFE00 0xFE08 ( 8) : 1111 111r rrrr 0bbb   -------- Skip if bit in register is set
+          b : 0x0007
+          r : 0x01F0
+    SEC A 0x9408 0xFFFF (16) : 1001 0100 0000 1000   -------0 Set carry flag
+    SEH A 0x9458 0xFFFF (16) : 1001 0100 0101 1000   --0----- Set half carry flag
+    SEI A 0x9478 0xFFFF (16) : 1001 0100 0111 1000   0------- Set global interrupt flag
+    SEN A 0x9428 0xFFFF (16) : 1001 0100 0010 1000   -----0-- Set negative flag
+    SER A 0xEF0F 0xFF0F (12) : 1110 1111 dddd 1111   -------- Clear bits in register
+          d : 0x00F0
+    SES A 0x9448 0xFFFF (16) : 1001 0100 0100 1000   ---0---- Set sign flag
+    SET A 0x9468 0xFFFF (16) : 1001 0100 0110 1000   -0------ Set T flag
+    SEV A 0x9438 0xFFFF (16) : 1001 0100 0011 1000   ----0--- Set overflow flag
+    SEZ A 0x9418 0xFFFF (16) : 1001 0100 0001 1000   ------0- Set zero flag
+  SLEEP   0x9588 0xFFFF (16) : 1001 0101 1000 1000   -------- Set circuit in sleep mode
+    SPM   0x95E8 0xFFEF (15) : 1001 0101 111x 1000   -------- Store program memory
+          x : 0x0010
+     ST A 0x9200 0xFE00 ( 7) : 1001 001r rrrr dddd   -------- Store indirect to data space using index
+          d : 0x000F
+          r : 0x01F0
+   ST_X   0x920C 0xFE0F (11) : 1001 001r rrrr 1100   -------- Store indirect to data space using index X
+          r : 0x01F0
+  ST_mX   0x920E 0xFE0F (11) : 1001 001r rrrr 1110   -------- Store indirect to data space using index X pre-decremented
+          r : 0x01F0
+  ST_Xp   0x920D 0xFE0F (11) : 1001 001r rrrr 1101   -------- Store indirect to data space using index X post-incremented
+          r : 0x01F0
+  ST_mY   0x920A 0xFE0F (11) : 1001 001r rrrr 1010   -------- Store indirect to data space using index Y pre-decremented
+          r : 0x01F0
+  ST_Yp   0x9209 0xFE0F (11) : 1001 001r rrrr 1001   -------- Store indirect to data space using index Y post-incremented
+          r : 0x01F0
+  ST_mZ   0x9202 0xFE0F (11) : 1001 001r rrrr 0010   -------- Store indirect to data space using index Z pre-decremented
+          r : 0x01F0
+  ST_Zp   0x9201 0xFE0F (11) : 1001 001r rrrr 0001   -------- Store indirect to data space using index Z post-incremented
+          r : 0x01F0
+    STD   0x8200 0xD200 ( 4) : 10q0 qq1r rrrr dqqq   -------- Load indirect from data space using index
+          q : 0x2C07
+          d : 0x0008
+          r : 0x01F0
+  STS16   0xA800 0xF800 ( 5) : 1010 1kkk rrrr kkkk   -------- Store direct
+          r : 0x00F0
+          k : 0x070F
+    STS   0x9200 0xFE0F (11) : 1001 001r rrrr 0000 + -------- Store direct
+          r : 0x01F0
+    SUB   0x1800 0xFC00 ( 6) : 0001 10rd dddd rrrr   --****** Subtract without carry
+          d : 0x01F0
+          r : 0x020F
+   SUBI   0x5000 0xF000 ( 4) : 0101 KKKK dddd KKKK   --****** Subtract immediate
+          d : 0x00F0
+          K : 0x0F0F
+   SWAP   0x9202 0xFE0F (11) : 1001 001d dddd 0010   -------- Swap nibbles
+          d : 0x01F0
+    TST A 0x2000 0xFC00 ( 6) : 0010 00rd dddd rrrr   --****** Test for zero or minus
+          d : 0x01F0
+          r : 0x020F
+    WDR   0x95A8 0xFFFF (16) : 1001 0101 1010 1000   -------- Watchdog reset
+    XCH   0x9204 0xFE0F (11) : 1001 001d dddd 0100   -------- Exchange
+          d : 0x01F0
+   DATA   0x0000 0x0000 ( 0) : null   null null
+ mnem.    opc.    mask   sz.   structure              sreg     description 
+--------+-------+------+-----+----------------------+--------+-------------
+   ELPM   0x95D8 0xFFFF (16) : 1001 0101 1101 1000   -------- Extended load program memory (from PS(RAMPZ:Z) to R0)
+    LPM   0x95C8 0xFFFF (16) : 1001 0101 1100 1000   -------- Load program memory (from PS(Z) to R0)
+    WDR   0x95A8 0xFFFF (16) : 1001 0101 1010 1000   -------- Watchdog reset
+  BREAK   0x9598 0xFFFF (16) : 1001 0101 1001 1000   -------- Set device in STOPPED mode for On-chip Debug system
+  SLEEP   0x9588 0xFFFF (16) : 1001 0101 1000 1000   -------- Set circuit in sleep mode
+ EICALL   0x9519 0xFFFF (16) : 1001 0101 0001 1001   -------- Extended indirect call to subroutine
+   RETI   0x9518 0xFFFF (16) : 1001 0101 0001 1000   -------- Return from interrupt service routine
+  ICALL   0x9509 0xFFFF (16) : 1001 0101 0000 1001   -------- Indirect call to subroutine
+    RET   0x9508 0xFFFF (16) : 1001 0101 0000 1000   -------- Return from subroutine
+    CLI A 0x94F8 0xFFFF (16) : 1001 0100 1111 1000   0------- Clear global interrupt flag
+    CLT A 0x94E8 0xFFFF (16) : 1001 0100 1110 1000   -0------ Clear T flag
+    CLH A 0x94D8 0xFFFF (16) : 1001 0100 1101 1000   --0----- Clear half carry flag
+    CLS A 0x94C8 0xFFFF (16) : 1001 0100 1100 1000   ---0---- Clear sign flag
+    CLV A 0x94B8 0xFFFF (16) : 1001 0100 1011 1000   ----0--- Clear overflow flag
+    CLN A 0x94A8 0xFFFF (16) : 1001 0100 1010 1000   -----0-- Clear negative flag
+    CLZ A 0x9498 0xFFFF (16) : 1001 0100 1001 1000   ------0- Clear zero flag
+    CLC A 0x9488 0xFFFF (16) : 1001 0100 1000 1000   -------0 Clear carry flag
+    SEI A 0x9478 0xFFFF (16) : 1001 0100 0111 1000   0------- Set global interrupt flag
+    SET A 0x9468 0xFFFF (16) : 1001 0100 0110 1000   -0------ Set T flag
+    SEH A 0x9458 0xFFFF (16) : 1001 0100 0101 1000   --0----- Set half carry flag
+    SES A 0x9448 0xFFFF (16) : 1001 0100 0100 1000   ---0---- Set sign flag
+    SEV A 0x9438 0xFFFF (16) : 1001 0100 0011 1000   ----0--- Set overflow flag
+    SEN A 0x9428 0xFFFF (16) : 1001 0100 0010 1000   -----0-- Set negative flag
+  EIJMP   0x9419 0xFFFF (16) : 1001 0100 0001 1001   -------- Extended indirect jump
+    SEZ A 0x9418 0xFFFF (16) : 1001 0100 0001 1000   ------0- Set zero flag
+   IJMP   0x9409 0xFFFF (16) : 1001 0100 0000 1001   -------- Indirect jump
+    SEC A 0x9408 0xFFFF (16) : 1001 0100 0000 1000   -------0 Set carry flag
+    NOP   0x0000 0xFFFF (16) : 0000 0000 0000 0000   -------- No operation
+    SPM   0x95E8 0xFFEF (15) : 1001 0101 111x 1000   -------- Store program memory
+          x : 0x0010
+   BCLR   0x9488 0xFF8F (13) : 1001 0100 1sss 1000   ???????? Bit clear in SREG
+          s : 0x0070
+   BSET   0x9408 0xFF8F (13) : 1001 0100 0sss 1000   ???????? Bit set in SREG
+          s : 0x0070
+    SER A 0xEF0F 0xFF0F (12) : 1110 1111 dddd 1111   -------- Clear bits in register
+          d : 0x00F0
+    DES   0x940B 0xFF0F (12) : 1001 0100 KKKK 1011   -------- DataInstruction Encryption Standard
+          K : 0x00F0
+    DEC   0x940A 0xFE0F (11) : 1001 010d dddd 1010   ---****- Decrement
+          d : 0x01F0
+    ROR   0x9407 0xFE0F (11) : 1001 010d dddd 0111   ---***** Rotate right through carry
+          d : 0x01F0
+    LSR   0x9406 0xFE0F (11) : 1001 010d dddd 0110   ---**0** Logical shift right
+          d : 0x01F0
+    ASR   0x9405 0xFE0F (11) : 1001 010d dddd 0101   ---***** Arithmetic shift right (Effectively divides a signed value by 2 without changing its sign)
+          d : 0x01F0
+    INC   0x9403 0xFE0F (11) : 1001 010d dddd 0011   ---****- Increment
+          d : 0x01F0
+    NEG   0x9401 0xFE0F (11) : 1001 010d dddd 0001   -------- Two's complement (negate)
+          d : 0x01F0
+    COM   0x9400 0xFE0F (11) : 1001 010d dddd 0000   ---*0**1 One's complement
+          d : 0x01F0
+   PUSH   0x920F 0xFE0F (11) : 1001 001r rrrr 1111   -------- Push register onto stack
+          r : 0x01F0
+  ST_mX   0x920E 0xFE0F (11) : 1001 001r rrrr 1110   -------- Store indirect to data space using index X pre-decremented
+          r : 0x01F0
+  ST_Xp   0x920D 0xFE0F (11) : 1001 001r rrrr 1101   -------- Store indirect to data space using index X post-incremented
+          r : 0x01F0
+   ST_X   0x920C 0xFE0F (11) : 1001 001r rrrr 1100   -------- Store indirect to data space using index X
+          r : 0x01F0
+  ST_mY   0x920A 0xFE0F (11) : 1001 001r rrrr 1010   -------- Store indirect to data space using index Y pre-decremented
+          r : 0x01F0
+  ST_Yp   0x9209 0xFE0F (11) : 1001 001r rrrr 1001   -------- Store indirect to data space using index Y post-incremented
+          r : 0x01F0
+    LAT   0x9207 0xFE0F (11) : 1001 001d dddd 0111   -------- Load and toggle
+          d : 0x01F0
+    LAC   0x9206 0xFE0F (11) : 1001 001d dddd 0110   -------- Load and clear
+          d : 0x01F0
+    LAS   0x9205 0xFE0F (11) : 1001 001d dddd 0101   -------- Load and set
+          d : 0x01F0
+    XCH   0x9204 0xFE0F (11) : 1001 001d dddd 0100   -------- Exchange
+          d : 0x01F0
+  ST_mZ   0x9202 0xFE0F (11) : 1001 001r rrrr 0010   -------- Store indirect to data space using index Z pre-decremented
+          r : 0x01F0
+   SWAP   0x9202 0xFE0F (11) : 1001 001d dddd 0010   -------- Swap nibbles
+          d : 0x01F0
+  ST_Zp   0x9201 0xFE0F (11) : 1001 001r rrrr 0001   -------- Store indirect to data space using index Z post-incremented
+          r : 0x01F0
+    STS   0x9200 0xFE0F (11) : 1001 001r rrrr 0000 + -------- Store direct
+          r : 0x01F0
+    POP   0x900F 0xFE0F (11) : 1001 000d dddd 1111   -------- Pop register from stack
+          d : 0x01F0
+  LD_mX   0x900E 0xFE0F (11) : 1001 000d dddd 1110   -------- Load indirect from data space using index X pre-decremented
+          d : 0x01F0
+  LD_Xp   0x900D 0xFE0F (11) : 1001 000d dddd 1101   -------- Load indirect from data space using index X post-incremented
+          d : 0x01F0
+   LD_X   0x900C 0xFE0F (11) : 1001 000d dddd 1100   -------- Load indirect from data space using index X
+          d : 0x01F0
+  LD_mY   0x900A 0xFE0F (11) : 1001 000d dddd 1010   -------- Load indirect from data space using index Y pre-decremented
+          d : 0x01F0
+  LD_Yp   0x9009 0xFE0F (11) : 1001 000d dddd 1001   -------- Load indirect from data space using index Y post-incremented
+          d : 0x01F0
+  LD_mZ   0x9002 0xFE0F (11) : 1001 000d dddd 0010   -------- Load indirect from data space using index Z pre-decremented
+          d : 0x01F0
+  LD_Zp   0x9001 0xFE0F (11) : 1001 000d dddd 0001   -------- Load indirect from data space using index Z post-incremented
+          d : 0x01F0
+    LDS   0x9000 0xFE0F (11) : 1001 000d dddd 0000 + -------- Load direct
+          d : 0x01F0
+   CALL   0x940E 0xFE0E (10) : 1001 010k kkkk 111k + -------- Long call to a subroutine
+          k : 0x01F1
+    JMP   0x940C 0xFE0E (10) : 1001 010k kkkk 110k + -------- Long jump
+          k : 0x01F1
+ELPM_Rd   0x9006 0xFE0E (10) : 1001 000d dddd 011x   -------- Extended load program memory (from PS(RAMPZ:Z) to Rd)
+          d : 0x01F0
+          x : 0x0001
+ LPM_Rd   0x9004 0xFE0E (10) : 1001 000d dddd 010x   -------- Load program memory (from PS(Z) to Rd)
+          d : 0x01F0
+          x : 0x0001
+ FMULSU   0x0388 0xFF88 (10) : 0000 0011 1ddd 1rrr   ------** Fractional multiply signed with unsigned
+          d : 0x0070
+          r : 0x0007
+  FMULS   0x0380 0xFF88 (10) : 0000 0011 1ddd 0rrr   ------** Fractional multiply signed
+          d : 0x0070
+          r : 0x0007
+   FMUL   0x0308 0xFF88 (10) : 0000 0011 0ddd 1rrr   ------** Fractional multiply unsigned
+          d : 0x0070
+          r : 0x0007
+  MULSU   0x0300 0xFF88 (10) : 0000 0011 0ddd 0rrr   -------- Multiply (signed with unsigned)
+          d : 0x0070
+          r : 0x0007
+   BRID A 0xF407 0xFC07 ( 9) : 1111 01kk kkkk k111   -------- Branch if global interrupt is disabled
+          k : 0x03F8
+   BRTC A 0xF406 0xFC07 ( 9) : 1111 01kk kkkk k110   -------- Branch if T flag is cleared
+          k : 0x03F8
+   BRHC A 0xF405 0xFC07 ( 9) : 1111 01kk kkkk k101   -------- Branch if half carry flag cleared
+          k : 0x03F8
+   BRGE A 0xF404 0xFC07 ( 9) : 1111 01kk kkkk k100   -------- Branch if greater or equal (signed)
+          k : 0x03F8
+   BRVC A 0xF403 0xFC07 ( 9) : 1111 01kk kkkk k011   -------- Branch if overflow flag is cleared
+          k : 0x03F8
+   BRPL A 0xF402 0xFC07 ( 9) : 1111 01kk kkkk k010   -------- Branch if plus
+          k : 0x03F8
+   BRNE A 0xF401 0xFC07 ( 9) : 1111 01kk kkkk k001   -------- Branch if not equal
+          k : 0x03F8
+   BRCC A 0xF400 0xFC07 ( 9) : 1111 01kk kkkk k000   -------- Branch if carry is cleared
+          k : 0x03F8
+   BRSH A 0xF400 0xFC07 ( 9) : 1111 01kk kkkk k000   -------- Branch if same or higher (unsigned)
+          k : 0x03F8
+   BRIE A 0xF007 0xFC07 ( 9) : 1111 00kk kkkk k111   -------- Branch if global interrupt is enabled
+          k : 0x03F8
+   BRTS A 0xF006 0xFC07 ( 9) : 1111 00kk kkkk k110   -------- Branch if T flag is set
+          k : 0x03F8
+   BRHS A 0xF005 0xFC07 ( 9) : 1111 00kk kkkk k101   -------- Branch if half carry flag set
+          k : 0x03F8
+   BRLT A 0xF004 0xFC07 ( 9) : 1111 00kk kkkk k100   -------- Branch if less than (signed)
+          k : 0x03F8
+   BRVS A 0xF003 0xFC07 ( 9) : 1111 00kk kkkk k011   -------- Branch if overflow flag is set
+          k : 0x03F8
+   BRMI A 0xF002 0xFC07 ( 9) : 1111 00kk kkkk k010   -------- Branch if minus
+          k : 0x03F8
+   BREQ A 0xF001 0xFC07 ( 9) : 1111 00kk kkkk k001   -------- Branch if equal
+          k : 0x03F8
+   BRCS A 0xF000 0xFC07 ( 9) : 1111 00kk kkkk k000   -------- Branch if carry is set
+          k : 0x03F8
+   BRLO A 0xF000 0xFC07 ( 9) : 1111 00kk kkkk k000   -------- Branch if lower (unsigned)
+          k : 0x03F8
+   SBRS   0xFE00 0xFE08 ( 8) : 1111 111r rrrr 0bbb   -------- Skip if bit in register is set
+          b : 0x0007
+          r : 0x01F0
+   SBRC   0xFC00 0xFE08 ( 8) : 1111 110r rrrr 0bbb   -------- Skip if bit in register is cleared
+          b : 0x0007
+          r : 0x01F0
+    BST   0xFA00 0xFE08 ( 8) : 1111 101r rrrr 0bbb   -------- Bit store from bit in register to T flag in SREG
+          b : 0x0007
+          r : 0x01F0
+    BLD   0xF800 0xFE08 ( 8) : 1111 100d dddd 0bbb   -------- Bit load from T flag in SREG to bit in register
+          d : 0x01F0
+          b : 0x0007
+   SBIS   0x9B00 0xFF00 ( 8) : 1001 1011 AAAA Abbb   -------- Skip if bit in I/O register set
+          b : 0x0007
+          A : 0x00F8
+    SBI   0x9A00 0xFF00 ( 8) : 1001 1010 AAAA Abbb   -------- Set bit in I/O register
+          b : 0x0007
+          A : 0x00F8
+   SBIC   0x9900 0xFF00 ( 8) : 1001 1001 AAAA Abbb   -------- Skip if bit in I/O register cleared
+          b : 0x0007
+          A : 0x00F8
+    CBI   0x9800 0xFF00 ( 8) : 1001 1000 AAAA Abbb   -------- Clear bit in I/O register
+          b : 0x0007
+          A : 0x00F8
+   SBIW   0x9700 0xFF00 ( 8) : 1001 0111 KKdd KKKK   ---***** Subrtact immediate from word
+          d : 0x0030
+          K : 0x00CF
+   ADIW   0x9600 0xFF00 ( 8) : 1001 0110 KKdd KKKK   ---***** Add immediate to word
+          d : 0x0030
+          K : 0x00CF
+   MULS   0x0200 0xFF00 ( 8) : 0000 0010 dddd rrrr   -------- Multiply (signed)
+          d : 0x00F0
+          r : 0x000F
+   MOVW   0x0100 0xFF00 ( 8) : 0000 0001 dddd rrrr   -------- Copy register word
+          d : 0x00F0
+          r : 0x000F
+     ST A 0x9200 0xFE00 ( 7) : 1001 001r rrrr dddd   -------- Store indirect to data space using index
+          d : 0x000F
+          r : 0x01F0
+     LD A 0x9000 0xFE00 ( 7) : 1001 000d dddd rrrr   -------- Load indirect from data space using index
+          d : 0x01F0
+          r : 0x000F
+   BRBC   0xF400 0xFC00 ( 6) : 1111 01kk kkkk ksss   -------- Branch is bit in SREG is cleared
+          s : 0x0007
+          k : 0x03F8
+   BRBS   0xF000 0xFC00 ( 6) : 1111 00kk kkkk ksss   -------- Branch is bit in SREG is set
+          s : 0x0007
+          k : 0x03F8
+    MUL   0x9C00 0xFC00 ( 6) : 1001 11rd dddd rrrr   -------- Multiply (unsigned)
+          d : 0x01F0
+          r : 0x020F
+    MOV   0x2C00 0xFC00 ( 6) : 0010 11rd dddd rrrr   -------- Copy register
+          d : 0x01F0
+          r : 0x020F
+     OR   0x2800 0xFC00 ( 6) : 0010 10rd dddd rrrr   ---*0**- Logical OR
+          d : 0x01F0
+          r : 0x020F
+    CLR A 0x2400 0xFC00 ( 6) : 0010 01rd dddd rrrr   ---0001* Clear register
+          d : 0x01F0
+          r : 0x020F
+    EOR   0x2400 0xFC00 ( 6) : 0010 01rd dddd rrrr   ---*0**- Logical exclusive OR
+          d : 0x01F0
+          r : 0x020F
+    AND   0x2000 0xFC00 ( 6) : 0010 00rd dddd rrrr   ---*0**- Logical AND
+          d : 0x01F0
+          r : 0x020F
+    TST A 0x2000 0xFC00 ( 6) : 0010 00rd dddd rrrr   --****** Test for zero or minus
+          d : 0x01F0
+          r : 0x020F
+    ADC   0x1C00 0xFC00 ( 6) : 0001 11rd dddd rrrr   --****** Add with carry
+          d : 0x01F0
+          r : 0x020F
+    ROL A 0x1C00 0xFC00 ( 6) : 0001 11rd dddd rrrr   --****** Rotate left through carry
+          d : 0x01F0
+          r : 0x020F
+    SUB   0x1800 0xFC00 ( 6) : 0001 10rd dddd rrrr   --****** Subtract without carry
+          d : 0x01F0
+          r : 0x020F
+     CP   0x1400 0xFC00 ( 6) : 0001 01rd dddd rrrr   --****** Compare
+          d : 0x01F0
+          r : 0x020F
+   CPSE   0x1000 0xFC00 ( 6) : 0001 00rd dddd rrrr   -------- Compare and skip if equal
+          d : 0x01F0
+          r : 0x020F
+    ADD   0x0C00 0xFC00 ( 6) : 0000 11rd dddd rrrr   --****** Add without carry
+          d : 0x01F0
+          r : 0x020F
+    LSL A 0x0C00 0xFC00 ( 6) : 0000 11rd dddd rrrr   --****** Logical shift left
+          d : 0x01F0
+          r : 0x020F
+    SBC   0x0800 0xFC00 ( 6) : 0000 10rd dddd rrrr   --****** Subtract with carry
+          d : 0x01F0
+          r : 0x020F
+    CPC   0x0400 0xFC00 ( 6) : 0000 01rd dddd rrrr   --****** Compare with carry
+          d : 0x01F0
+          r : 0x020F
+    OUT   0xB800 0xF800 ( 5) : 1011 1AAr rrrr AAAA   -------- Store register to I/O location
+          r : 0x01F0
+          A : 0x060F
+     IN   0xB000 0xF800 ( 5) : 1011 0AAd dddd AAAA   -------- Load an I/O location to register
+          d : 0x01F0
+          A : 0x060F
+  STS16   0xA800 0xF800 ( 5) : 1010 1kkk rrrr kkkk   -------- Store direct
+          r : 0x00F0
+          k : 0x070F
+  LDS16   0xA000 0xF800 ( 5) : 1010 0kkk dddd kkkk   -------- Load direct
+          d : 0x00F0
+          k : 0x070F
+    LDI   0xE000 0xF000 ( 4) : 1110 KKKK dddd KKKK   -------- Load immediate
+          d : 0x00F0
+          K : 0x0F0F
+  RCALL   0xD000 0xF000 ( 4) : 1101 kkkk kkkk kkkk   -------- Relative call to subroutine
+          k : 0x0FFF
+   RJMP   0xC000 0xF000 ( 4) : 1100 kkkk kkkk kkkk   -------- Relative jump
+          k : 0x0FFF
+    STD   0x8200 0xD200 ( 4) : 10q0 qq1r rrrr dqqq   -------- Load indirect from data space using index
+          q : 0x2C07
+          d : 0x0008
+          r : 0x01F0
+    LDD   0x8000 0xD200 ( 4) : 10q0 qq0d dddd rqqq   -------- Load indirect from data space using index
+          q : 0x2C07
+          d : 0x01F0
+          r : 0x0008
+   ANDI   0x7000 0xF000 ( 4) : 0111 KKKK dddd KKKK   ---*0**- Logical AND with immediate
+          d : 0x00F0
+          K : 0x0F0F
+    CBR A 0x7000 0xF000 ( 4) : 0111 KKKK dddd KKKK   ---*0**- Clear bits in register
+          d : 0x00F0
+          K : 0x0F0F
+    ORI   0x6000 0xF000 ( 4) : 0110 KKKK dddd KKKK   ---*0**- Logical OR with immediate
+          d : 0x00F0
+          K : 0x0F0F
+    SBR A 0x6000 0xF000 ( 4) : 0110 KKKK dddd KKKK   ---*0**- Set bits in register
+          d : 0x00F0
+          K : 0x0F0F
+   SUBI   0x5000 0xF000 ( 4) : 0101 KKKK dddd KKKK   --****** Subtract immediate
+          d : 0x00F0
+          K : 0x0F0F
+   SBCI   0x4000 0xF000 ( 4) : 0100 KKKK dddd KKKK   --****** Subtract immediate with carry
+          d : 0x00F0
+          K : 0x0F0F
+    CPI   0x3000 0xF000 ( 4) : 0011 KKKK dddd KKKK   --****** Compare with immediate
+          d : 0x00F0
+          K : 0x0F0F

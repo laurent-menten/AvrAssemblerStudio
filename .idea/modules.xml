@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AvrAssemblerStudio.iml" filepath="$PROJECT_DIR$/AvrAssemblerStudio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/avr-simulator/avr-simulator.iml" filepath="$PROJECT_DIR$/avr-simulator/avr-simulator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/avr-simulator2/avr-simulator2.iml" filepath="$PROJECT_DIR$/avr-simulator2/avr-simulator2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Libraries/lib-fxribbon/lib-fxribbon.iml" filepath="$PROJECT_DIR$/../Libraries/lib-fxribbon/lib-fxribbon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Libraries/lib-json.simple/lib-json.simple.iml" filepath="$PROJECT_DIR$/../Libraries/lib-json.simple/lib-json.simple.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../LMenten-Libraries/lib-lmenten/lib-lmenten.iml" filepath="$PROJECT_DIR$/../LMenten-Libraries/lib-lmenten/lib-lmenten.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../LMenten-Libraries/lib-lmenten-fx/lib-lmenten-fx.iml" filepath="$PROJECT_DIR$/../LMenten-Libraries/lib-lmenten-fx/lib-lmenten-fx.iml" />
+    </modules>
+  </component>
+</project>

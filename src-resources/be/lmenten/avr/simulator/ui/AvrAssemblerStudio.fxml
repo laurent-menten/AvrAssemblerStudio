@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.pixelduke.control.Ribbon?>
+<?import com.pixelduke.control.ribbon.Column?>
+<?import com.pixelduke.control.ribbon.QuickAccessBar?>
+<?import com.pixelduke.control.ribbon.RibbonGroup?>
+<?import com.pixelduke.control.ribbon.RibbonItem?>
+<?import com.pixelduke.control.ribbon.RibbonTab?>
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<?import be.lmenten.avr.simulator.ui.control.CombinedControl?>
+
+<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" stylesheets="@AvrSimulator.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="be.lmenten.avr.simulator.ui.AvrAssemblerStudioController">
+
+	<top>
+		<Ribbon>
+
+			<quickAccessBar>
+				<QuickAccessBar>
+					<buttons>
+
+						<Button fx:id="quickSaveButton" onAction="#saveProject">
+							<graphic>
+								<ImageView>
+									<Image url="@../../../../../../src/be/lmenten/avr/simulator/images/ui/icons8_Save_16px.png" />
+								</ImageView>
+							</graphic>
+						</Button>
+<!--
+						<Button>
+							<graphic>
+								<ImageView>
+									<Image url="@images/ui/icons8_Undo_16px.png" />
+								</ImageView>
+							</graphic>
+						</Button>
+
+						<Button>
+							<graphic>
+								<ImageView>
+									<Image url="@images/ui/icons8_Redo_16px.png" />
+								</ImageView>
+							</graphic>
+						</Button>
+-->
+					</buttons>
+				</QuickAccessBar>
+			</quickAccessBar>
+
+			<tabs>
+
+				<RibbonTab text="%ribbon.tab.home">
+					<ribbonGroups>
+
+						<RibbonGroup title="Files">
+							<nodes>
+		
+								<Button fx:id="openButton" contentDisplay="TOP" onAction="#openProject" styleClass="big" text="Open" wrapText="true">
+									<graphic>
+										<ImageView>
+											<Image url="@../../../../../../src/be/lmenten/avr/simulator/images/ui/icons8_Open_32px_3.png" />
+										</ImageView>
+									</graphic>
+									<font>
+										<Font size="11.0" />
+									</font>
+								</Button>
+		
+								<Button fx:id="newButton" contentDisplay="TOP" onAction="#openNewProject" styleClass="big" text="New" wrapText="true">
+									<graphic>
+										<ImageView>
+											<Image url="@../../../../../../src/be/lmenten/avr/simulator/images/ui/icons8_File_32px_1.png" />
+										</ImageView>
+									</graphic>
+									<font>
+										<Font size="11.0" />
+									</font>
+								</Button>
+
+								<Button fx:id="saveButton" contentDisplay="TOP" onAction="#saveProject" styleClass="big" text="Save" wrapText="true">
+									<graphic>
+										<ImageView>
+											<Image url="@../../../../../../src/be/lmenten/avr/simulator/images/ui/icons8_Save_32px.png" />
+										</ImageView>
+									</graphic>
+									<font>
+										<Font size="11.0" />
+									</font>
+								</Button>
+
+								<Button fx:id="saveAsButton" contentDisplay="TOP" onAction="#saveProjectAs" styleClass="big" text="Save as" wrapText="true">
+									<graphic>
+										<ImageView>
+											<Image url="@../../../../../../src/be/lmenten/avr/simulator/images/ui/icons8_Save_as_32px.png" />
+										</ImageView>
+									</graphic>
+									<font>
+										<Font size="11.0" />
+									</font>
+								</Button>
+
+							</nodes>
+						</RibbonGroup>
+
+						<RibbonGroup title="Project">
+							<nodes>
+								<Column>
+									<RibbonItem label="MCU:">
+										<graphic>
+											<ImageView>
+												<Image url="@../../../../../../src/be/lmenten/avr/simulator/images/ui/icons8_Change_Theme_16px.png" />
+											</ImageView>
+										</graphic>
+										<item>
+											<ComboBox>
+												<items>
+													<FXCollections fx:factory="observableArrayList">
+														<String fx:value="ATmega2560" />
+														<String fx:value="ATmega328" />
+														<String fx:value="ATmega328P" />
+														<String fx:value="ATmega328PB" />
+													</FXCollections>
+												</items>
+												<value>
+													<String fx:value="ATmega2560" />
+												</value>
+											</ComboBox>
+										</item>
+									</RibbonItem>
+								</Column>
+
+								<Column>
+									<RibbonItem label="Application:">
+										<graphic>
+											<ImageView>
+												<Image url="@../../../../../../src/be/lmenten/avr/simulator/images/ui/icons8_Change_Theme_16px.png" />
+											</ImageView>
+										</graphic>
+										<item>
+												<CombinedControl  prefHeight="25.0" prefWidth="218.0" />
+												<!--  TextField prefHeight="25.0" prefWidth="218.0" / -->
+										</item>
+									</RibbonItem>
+
+									<RibbonItem label="Bootloader:">
+										<graphic>
+											<ImageView>
+												<Image url="@../../../../../../src/be/lmenten/avr/simulator/images/ui/icons8_Location_16px.png" />
+											</ImageView>
+										</graphic>
+										<item>
+												<CombinedControl  prefHeight="25.0" prefWidth="218.0" />
+												<!--  TextField prefHeight="25.0" prefWidth="218.0" / -->
+										</item>
+									</RibbonItem>
+
+									<RibbonItem label="Eeprom:">
+										<graphic>
+											<ImageView>
+												<Image url="@../../../../../../src/be/lmenten/avr/simulator/images/ui/icons8_Location_16px.png" />
+											</ImageView>
+										</graphic>
+										<item>
+												<CombinedControl  prefHeight="25.0" prefWidth="218.0" />
+												<!--  TextField prefHeight="25.0" prefWidth="218.0" / -->
+										</item>
+									</RibbonItem>
+								</Column>
+
+							</nodes>
+						</RibbonGroup>
+
+
+						<RibbonGroup title="Simulation">
+							<nodes>
+								<Button fx:id="testButton" contentDisplay="TOP" onAction="#test" styleClass="big" text="Test" wrapText="true">
+									<graphic>
+										<ImageView>
+											<Image url="@../../../../../../src/be/lmenten/avr/simulator/images/ui/icons8_Info_32px.png" />
+										</ImageView>
+									</graphic>
+									<font>
+										<Font size="11.0" />
+									</font>
+								</Button>
+								<Button fx:id="stepButton" contentDisplay="TOP" onAction="#step" styleClass="big" text="Step" wrapText="true">
+									<graphic>
+										<ImageView>
+											<Image url="@../../../../../../src/be/lmenten/avr/simulator/images/ui/icons8_Info_32px.png" />
+										</ImageView>
+									</graphic>
+									<font>
+										<Font size="11.0" />
+									</font>
+								</Button>
+								<Button fx:id="stepOverButton" contentDisplay="TOP" onAction="#stepOver" styleClass="big" text="Step over" wrapText="true">
+									<graphic>
+										<ImageView>
+											<Image url="@../../../../../../src/be/lmenten/avr/simulator/images/ui/icons8_Info_32px.png" />
+										</ImageView>
+									</graphic>
+									<font>
+										<Font size="11.0" />
+									</font>
+								</Button>
+								<Button fx:id="stepOutButton" contentDisplay="TOP" onAction="#stepOut" styleClass="big" text="Step out" wrapText="true">
+									<graphic>
+										<ImageView>
+											<Image url="@../../../../../../src/be/lmenten/avr/simulator/images/ui/icons8_Info_32px.png" />
+										</ImageView>
+									</graphic>
+									<font>
+										<Font size="11.0" />
+									</font>
+								</Button>
+								<Button fx:id="runButton" contentDisplay="TOP" onAction="#run" styleClass="big" text="Run" wrapText="true">
+									<graphic>
+										<ImageView>
+											<Image url="@../../../../../../src/be/lmenten/avr/simulator/images/ui/icons8_Info_32px.png" />
+										</ImageView>
+									</graphic>
+									<font>
+										<Font size="11.0" />
+									</font>
+								</Button>
+							</nodes>
+						</RibbonGroup>
+
+<!--
+						<RibbonGroup title="Preferences">
+							<nodes>
+								<Column>
+									<RibbonItem label="Theme:">
+										<graphic>
+											<ImageView>
+												<Image url="@images/ui/icons8_Change_Theme_16px.png" />
+											</ImageView>
+										</graphic>
+										<item>
+											<ComboBox>
+												<items>
+													<FXCollections fx:factory="observableArrayList">
+														<String fx:value="Office Silver 2007" />
+														<String fx:value="Office Blue 2007" />
+														<String fx:value="Nebula Brick Wall" />
+														<String fx:value="Business Blue 
+												Steel" />
+													</FXCollections>
+												</items>
+												<value>
+													<String fx:value="Office Silver 
+												2007" />
+												</value>
+											</ComboBox>
+										</item>
+									</RibbonItem>
+									<RibbonItem label="Language:">
+										<graphic>
+											<ImageView>
+												<Image url="@images/ui/icons8_Location_16px.png" />
+											</ImageView>
+										</graphic>
+										<item>
+											<ComboBox>
+												<items>
+													<FXCollections fx:factory="observableArrayList">
+														<String fx:value="English (UK)" />
+														<String fx:value="Portugues (PT)" />
+														<String fx:value="Portugues (BR)" />
+														<String fx:value="English (USA)" />
+													</FXCollections>
+												</items>
+												<value>
+													<String fx:value="English (UK)" />
+												</value>
+											</ComboBox>
+										</item>
+									</RibbonItem>
+								</Column>
+								<Column>
+									<RibbonItem label="Angles:">
+										<item>
+											<ComboBox>
+												<items>
+													<FXCollections fx:factory="observableArrayList">
+														<String fx:value="Radians" />
+														<String fx:value="Degrees" />
+													</FXCollections>
+												</items>
+												<value>
+													<String fx:value="Radians" />
+												</value>
+											</ComboBox>
+										</item>
+									</RibbonItem>
+									<RibbonItem label="Decimal Places:">
+										<item>
+											<TextField prefWidth="60" text="2">
+											</TextField>
+										</item>
+									</RibbonItem>
+									<RibbonItem label="Exponential Threshold:">
+										<item>
+											<TextField prefWidth="60" text="3">
+											</TextField>
+										</item>
+									</RibbonItem>
+								</Column>
+								<Column>
+									<ToggleButton minWidth="-Infinity" styleClass="normal"
+										text="locked">
+										<graphic>
+											<ImageView>
+												<Image url="@images/ui/icons8_Lock_16px.png" />
+											</ImageView>
+										</graphic>
+									</ToggleButton>
+								</Column>
+							</nodes>
+						</RibbonGroup>
+-->
+					</ribbonGroups>
+				</RibbonTab>
+
+
+				<RibbonTab text="%ribbon.tab.mcu.configuration">
+					<ribbonGroups>
+
+						<RibbonGroup title="Lock bits">
+							<nodes>
+								<Column>
+
+									<RibbonItem label="Low:">
+										<graphic>
+											<ImageView>
+												<Image url="@../../../../../../src/be/lmenten/avr/simulator/images/ui/icons8_Change_Theme_16px.png" />
+											</ImageView>
+										</graphic>
+										<item>
+											<ComboBox>
+												<items>
+													<FXCollections fx:factory="observableArrayList">
+														<String fx:value="Place holder" />
+													</FXCollections>
+												</items>
+												<value>
+													<String fx:value="Place holder" />
+												</value>
+											</ComboBox>
+										</item>
+									</RibbonItem>
+
+									<RibbonItem label="High:">
+										<graphic>
+											<ImageView>
+												<Image url="@../../../../../../src/be/lmenten/avr/simulator/images/ui/icons8_Change_Theme_16px.png" />
+											</ImageView>
+										</graphic>
+										<item>
+											<ComboBox>
+												<items>
+													<FXCollections fx:factory="observableArrayList">
+														<String fx:value="Place holder" />
+													</FXCollections>
+												</items>
+												<value>
+													<String fx:value="Place holder" />
+												</value>
+											</ComboBox>
+										</item>
+									</RibbonItem>
+
+									<RibbonItem label="Extended:">
+										<graphic>
+											<ImageView>
+												<Image url="@../../../../../../src/be/lmenten/avr/simulator/images/ui/icons8_Change_Theme_16px.png" />
+											</ImageView>
+										</graphic>
+										<item>
+											<ComboBox>
+												<items>
+													<FXCollections fx:factory="observableArrayList">
+														<String fx:value="Place holder" />
+													</FXCollections>
+												</items>
+												<value>
+													<String fx:value="Place holder" />
+												</value>
+											</ComboBox>
+										</item>
+									</RibbonItem>
+
+								</Column>
+							</nodes>
+						</RibbonGroup>
+
+						<RibbonGroup title="Fuses">
+							<nodes>
+								<Column>
+
+									<RibbonItem label="Fuse:">
+										<graphic>
+											<ImageView>
+												<Image url="@../../../../../../src/be/lmenten/avr/simulator/images/ui/icons8_Change_Theme_16px.png" />
+											</ImageView>
+										</graphic>
+										<item>
+											<ComboBox>
+												<items>
+													<FXCollections fx:factory="observableArrayList">
+														<String fx:value="Place holder" />
+													</FXCollections>
+												</items>
+												<value>
+													<String fx:value="Place holder" />
+												</value>
+											</ComboBox>
+										</item>
+									</RibbonItem>
+
+								</Column>
+							</nodes>
+						</RibbonGroup>
+
+						<RibbonGroup title="Miscelaneous">
+							<nodes>
+								<Column>
+								</Column>
+							</nodes>
+						</RibbonGroup>
+
+					</ribbonGroups>
+				</RibbonTab>
+
+				<RibbonTab text="%ribbon.tab.simulation">
+					<ribbonGroups>
+					</ribbonGroups>
+				</RibbonTab>
+
+				<RibbonTab text="%ribbon.tab.help">
+					<ribbonGroups>
+						<RibbonGroup title="%help">
+							<nodes>
+
+								<Button contentDisplay="TOP" styleClass="big" text="Web" wrapText="true">
+									<graphic>
+										<ImageView>
+											<Image url="@../../../../../../src/be/lmenten/avr/simulator/images/ui/icons8_Globe_32px.png" />
+										</ImageView>
+									</graphic>
+									<font>
+										<Font size="11.0" />
+									</font>
+								</Button>
+
+								<Button contentDisplay="TOP" styleClass="big" text="About" wrapText="true">
+									<graphic>
+										<ImageView>
+											<Image url="@../../../../../../src/be/lmenten/avr/simulator/images/ui/icons8_Info_32px.png" />
+										</ImageView>
+									</graphic>
+									<font>
+										<Font size="11.0" />
+									</font>
+								</Button>
+
+								<Button contentDisplay="TOP" onAction="#ttestt" styleClass="big" text="%help" wrapText="true">
+									<graphic>
+										<ImageView>
+											<Image url="@../../../../../../src/be/lmenten/avr/simulator/images/ui/icons8_Help_32px.png" />
+										</ImageView>
+									</graphic>
+									<font>
+										<Font size="11.0" />
+									</font>
+								</Button>
+
+							</nodes>
+						</RibbonGroup>
+
+					</ribbonGroups>
+				</RibbonTab>
+
+			</tabs>
+
+		</Ribbon>
+
+	</top>
+
+<!-- ====================================================================== -->
+<!-- ====================================================================== -->
+
+	<center>
+		<SplitPane dividerPositions="0.2, 0.8" focusTraversable="true" prefHeight="575.0" prefWidth="1203.0">
+			<items>
+
+			<AnchorPane>
+               <children>
+                  <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" style="&#10;" text="View" textAlignment="CENTER" wrapText="false">
+                     <font>
+                        <Font size="18.0" fx:id="x11" />
+                     </font>
+                     <textFill>
+                        <Color red="0.624" green="0.624" blue="0.624" fx:id="x21" />
+                     </textFill>
+                  </Label>
+               </children>
+			</AnchorPane>
+
+			<AnchorPane minHeight="-1.0" minWidth="-1.0">
+			</AnchorPane>
+
+				<AnchorPane>
+               <children>
+                  <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" style="&#10;" text="View" textAlignment="CENTER" wrapText="false">
+                     <font>
+                        <Font size="18.0" fx:id="x12" />
+                     </font>
+                     <textFill>
+                        <Color red="0.624" green="0.624" blue="0.624" fx:id="x22" />
+                     </textFill>
+                  </Label>
+               </children>
+				</AnchorPane>
+
+			</items>
+		</SplitPane>
+	</center>
+
+<!-- ====================================================================== -->
+<!-- ====================================================================== -->
+
+	<bottom>
+		<HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" BorderPane.alignment="CENTER">
+			<children>
+				<Label fx:id="statusLeft" maxHeight="1.7976931348623157E308" maxWidth="-1.0" text="Left status" HBox.hgrow="ALWAYS">
+					<font>
+						<Font size="11.0" fx:id="x3" />
+					</font>
+					<textFill>
+						<Color red="0.625" green="0.625" blue="0.625" fx:id="x4" />
+					</textFill>
+				</Label>
+				<Pane prefHeight="-1.0" prefWidth="-1.0" HBox.hgrow="ALWAYS" />
+				<Label fx:id="statusRight" font="$x3" maxWidth="-1.0" text="Right status" textFill="$x4" HBox.hgrow="NEVER" />
+			</children>
+			<padding>
+				<Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+			</padding>
+		</HBox>
+	</bottom>
+
+<!-- ====================================================================== -->
+<!-- ====================================================================== -->
+
+   <left>
+					<Accordion fx:id="registersAccordion" prefHeight="589.0" prefWidth="253.0" BorderPane.alignment="CENTER">
+						<panes>
+
+							<TitledPane fx:id="generalRegisters" animated="false" expanded="true" prefHeight="223.0" prefWidth="222.0" text="General purpose registers">
+							</TitledPane>
+
+            <TitledPane text="Interruts">
+                        </TitledPane>
+
+						</panes>
+					</Accordion>
+   </left>
+
+<!-- ====================================================================== -->
+<!-- ====================================================================== -->
+
+   <right>
+						<Accordion fx:id="memoryAccordion" prefHeight="589.0" prefWidth="253.0" BorderPane.alignment="CENTER">
+							<panes>
+
+							<TitledPane fx:id="ioRegisters" animated="false" expanded="false" text="I/O registers">
+							</TitledPane>
+
+							<TitledPane fx:id="extendedIoRegisters" animated="false" expanded="false" text="Extended I/O registers">
+							</TitledPane>
+
+								<TitledPane animated="false" expanded="true" text="Memory">
+									<content>
+										<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+									</content>
+								</TitledPane>
+
+								<TitledPane animated="false" expanded="false" text="Eeprom">
+									<content>
+										<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+									</content>
+								</TitledPane>
+
+							</panes>
+						</Accordion>
+   </right>
+</BorderPane>

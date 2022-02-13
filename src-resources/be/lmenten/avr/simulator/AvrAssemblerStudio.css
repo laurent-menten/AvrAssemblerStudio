@@ -1,0 +1,12 @@
+.mytext {
+    -fx-font-style: italic;
+}
+
+.instruction-bit-first {
+	-fx-border-color: black;
+	-fx-border: 1px 1px 1px 1px;
+}
+.instruction-bit {
+	-fx-border-color: black;
+	-fx-border: 1px 1px 1px 0px;
+}

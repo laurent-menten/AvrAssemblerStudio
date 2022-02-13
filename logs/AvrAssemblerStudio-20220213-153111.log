@@ -1,0 +1,490 @@
+24.4: 13/02/2022 15:31:11.890 [be.lmenten.utils.app.fx.FxApplication.init] - [FINER] - Installing log source filter
+28.5: 13/02/2022 15:31:11.897 [be.lmenten.utils.app.fx.FxApplication.start] - [FINE] - FxApplication.start() ...
+28.257: 13/02/2022 15:31:12.264 [be.lmenten.utils.app.fx.FxApplication.logRuntimeInformation] - [CONFIG] - Operating system: Windows 10 (10.0) amd64
+28.258: 13/02/2022 15:31:12.266 [be.lmenten.utils.app.fx.FxApplication.logRuntimeInformation] - [CONFIG] - Java VM: Java HotSpot(TM) 64-Bit Server VM (17.0.1+12-LTS-39) mixed mode, sharing
+28.259: 13/02/2022 15:31:12.268 [be.lmenten.utils.app.fx.FxApplication.logRuntimeInformation] - [CONFIG] - Java runtime: Java(TM) SE Runtime Environment (17.0.1+12-LTS-39)
+28.260: 13/02/2022 15:31:12.269 [be.lmenten.utils.app.fx.FxApplication.logRuntimeInformation] - [CONFIG] - JavaFX runtime: 17.0.1 (17.0.1+1)
+28.261: 13/02/2022 15:31:12.275 [be.lmenten.utils.app.fx.FxApplication.logRuntimeInformation] - [CONFIG] - App version: 1.0.1-ea0-1-devel (build 1, 2022-01-16T16:22:04)
+28.262: 13/02/2022 15:31:12.276 [be.lmenten.utils.app.fx.FxApplication.logRuntimeInformation] - [CONFIG] - Running from JAR: Yes
+28.263: 13/02/2022 15:31:12.277 [be.lmenten.utils.app.fx.FxApplication.logRuntimeInformation] - [CONFIG] - Debug mode: ENABLED
+28.264: 13/02/2022 15:31:12.277 [be.lmenten.utils.app.fx.FxApplication.logRuntimeInformation] - [CONFIG] - Log output style: Ansi
+28.265: 13/02/2022 15:31:12.278 [be.lmenten.utils.app.fx.FxApplication.logRuntimeInformation] - [CONFIG] - Log level: All
+28.266: 13/02/2022 15:31:12.278 [be.lmenten.utils.app.fx.FxApplication.logRuntimeInformation] - [CONFIG] - Log filter: be.lmenten.*
+28.267: 13/02/2022 15:31:12.278 [be.lmenten.utils.app.fx.FxApplication.logRuntimeInformation] - [CONFIG] - Log file: .\logs\AvrAssemblerStudio-20220213-153111.log
+28.268: 13/02/2022 15:31:12.280 [be.lmenten.utils.app.fx.FxApplication.logRuntimeInformation] - [CONFIG] - Keep logfile: true
+28.269: 13/02/2022 15:31:12.281 [be.lmenten.utils.app.fx.FxApplication.logRuntimeInformation] - [CONFIG] - Show log window: true
+28.270: 13/02/2022 15:31:12.281 [be.lmenten.utils.app.fx.FxApplication.logRuntimeInformation] - [CONFIG] - Show exception window: true
+28.271: 13/02/2022 15:31:12.282 [be.lmenten.utils.app.fx.FxApplication.logRuntimeInformation] - [CONFIG] - Locale: en_GB
+28.272: 13/02/2022 15:31:12.282 [be.lmenten.avr.simulator.AvrAssemblerStudio.start] - [INFO] - Application running ...
+28.10963: 13/02/2022 15:31:14.811 [be.lmenten.avr.core.instruction.InstructionSet.init] - [INFO] - Initializing InstructionSet
+28.10964: 13/02/2022 15:31:14.812 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction ADC
+28.10965: 13/02/2022 15:31:14.817 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    0001 11rd dddd rrrr --> 0x1C00 0xFC00 ( 6 bits)   
+28.10966: 13/02/2022 15:31:14.818 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       r : 0x020F
+28.10967: 13/02/2022 15:31:14.818 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x01F0
+28.10968: 13/02/2022 15:31:14.818 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction ADD
+28.10969: 13/02/2022 15:31:14.818 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    0000 11rd dddd rrrr --> 0x0C00 0xFC00 ( 6 bits)   
+28.10970: 13/02/2022 15:31:14.818 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       r : 0x020F
+28.10971: 13/02/2022 15:31:14.819 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x01F0
+28.10972: 13/02/2022 15:31:14.819 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction ADIW
+28.10973: 13/02/2022 15:31:14.819 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 0110 KKdd KKKK --> 0x9600 0xFF00 ( 8 bits)   
+28.10974: 13/02/2022 15:31:14.819 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       K : 0x00CF
+28.10975: 13/02/2022 15:31:14.819 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x0030
+28.10976: 13/02/2022 15:31:14.820 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction AND
+28.10977: 13/02/2022 15:31:14.820 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    0010 00rd dddd rrrr --> 0x2000 0xFC00 ( 6 bits)   
+28.10978: 13/02/2022 15:31:14.820 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       r : 0x020F
+28.10979: 13/02/2022 15:31:14.820 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x01F0
+28.10980: 13/02/2022 15:31:14.820 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction ANDI
+28.10981: 13/02/2022 15:31:14.820 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    0111 KKKK dddd KKKK --> 0x7000 0xF000 ( 4 bits)   
+28.10982: 13/02/2022 15:31:14.820 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       K : 0x0F0F
+28.10983: 13/02/2022 15:31:14.821 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x00F0
+28.10984: 13/02/2022 15:31:14.821 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction ASR
+28.10985: 13/02/2022 15:31:14.821 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 010d dddd 0101 --> 0x9405 0xFE0F (11 bits)   
+28.10986: 13/02/2022 15:31:14.821 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x01F0
+28.10987: 13/02/2022 15:31:14.821 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction BCLR
+28.10988: 13/02/2022 15:31:14.821 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 0100 1sss 1000 --> 0x9488 0xFF8F (13 bits)   
+28.10989: 13/02/2022 15:31:14.821 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       s : 0x0070
+28.10990: 13/02/2022 15:31:14.821 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction BLD
+28.10991: 13/02/2022 15:31:14.822 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1111 100d dddd 0bbb --> 0xF800 0xFE08 ( 8 bits)   
+28.10992: 13/02/2022 15:31:14.822 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       b : 0x0007
+28.10993: 13/02/2022 15:31:14.822 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x01F0
+28.10994: 13/02/2022 15:31:14.822 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction BRBC
+28.10995: 13/02/2022 15:31:14.822 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1111 01kk kkkk ksss --> 0xF400 0xFC00 ( 6 bits)   
+28.10996: 13/02/2022 15:31:14.822 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       s : 0x0007
+28.10997: 13/02/2022 15:31:14.823 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       k : 0x03F8
+28.10998: 13/02/2022 15:31:14.823 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction BRBS
+28.10999: 13/02/2022 15:31:14.823 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1111 00kk kkkk ksss --> 0xF000 0xFC00 ( 6 bits)   
+28.11000: 13/02/2022 15:31:14.823 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       s : 0x0007
+28.11001: 13/02/2022 15:31:14.823 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       k : 0x03F8
+28.11002: 13/02/2022 15:31:14.823 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction BREAK
+28.11003: 13/02/2022 15:31:14.823 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 0101 1001 1000 --> 0x9598 0xFFFF (16 bits)   
+28.11004: 13/02/2022 15:31:14.824 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction BRCC
+28.11005: 13/02/2022 15:31:14.824 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1111 01kk kkkk k000 --> 0xF400 0xFC07 ( 9 bits)   [alias for null]
+28.11006: 13/02/2022 15:31:14.824 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       k : 0x03F8
+28.11007: 13/02/2022 15:31:14.824 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction BRCS
+28.11008: 13/02/2022 15:31:14.825 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1111 00kk kkkk k000 --> 0xF000 0xFC07 ( 9 bits)   [alias for null]
+28.11009: 13/02/2022 15:31:14.825 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       k : 0x03F8
+28.11010: 13/02/2022 15:31:14.825 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction BREQ
+28.11011: 13/02/2022 15:31:14.825 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1111 00kk kkkk k001 --> 0xF001 0xFC07 ( 9 bits)   [alias for null]
+28.11012: 13/02/2022 15:31:14.825 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       k : 0x03F8
+28.11013: 13/02/2022 15:31:14.825 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction BRGE
+28.11014: 13/02/2022 15:31:14.825 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1111 01kk kkkk k100 --> 0xF404 0xFC07 ( 9 bits)   [alias for null]
+28.11015: 13/02/2022 15:31:14.826 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       k : 0x03F8
+28.11016: 13/02/2022 15:31:14.826 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction BRHC
+28.11017: 13/02/2022 15:31:14.826 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1111 01kk kkkk k101 --> 0xF405 0xFC07 ( 9 bits)   [alias for null]
+28.11018: 13/02/2022 15:31:14.826 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       k : 0x03F8
+28.11019: 13/02/2022 15:31:14.826 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction BRHS
+28.11020: 13/02/2022 15:31:14.826 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1111 00kk kkkk k101 --> 0xF005 0xFC07 ( 9 bits)   [alias for null]
+28.11021: 13/02/2022 15:31:14.827 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       k : 0x03F8
+28.11022: 13/02/2022 15:31:14.827 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction BRID
+28.11023: 13/02/2022 15:31:14.827 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1111 01kk kkkk k111 --> 0xF407 0xFC07 ( 9 bits)   [alias for null]
+28.11024: 13/02/2022 15:31:14.827 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       k : 0x03F8
+28.11025: 13/02/2022 15:31:14.827 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction BRIE
+28.11026: 13/02/2022 15:31:14.827 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1111 00kk kkkk k111 --> 0xF007 0xFC07 ( 9 bits)   [alias for null]
+28.11027: 13/02/2022 15:31:14.827 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       k : 0x03F8
+28.11028: 13/02/2022 15:31:14.827 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction BRLO
+28.11029: 13/02/2022 15:31:14.828 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1111 00kk kkkk k000 --> 0xF000 0xFC07 ( 9 bits)   [alias for null]
+28.11030: 13/02/2022 15:31:14.828 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       k : 0x03F8
+28.11031: 13/02/2022 15:31:14.828 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction BRLT
+28.11032: 13/02/2022 15:31:14.828 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1111 00kk kkkk k100 --> 0xF004 0xFC07 ( 9 bits)   [alias for null]
+28.11033: 13/02/2022 15:31:14.828 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       k : 0x03F8
+28.11034: 13/02/2022 15:31:14.828 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction BRMI
+28.11035: 13/02/2022 15:31:14.828 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1111 00kk kkkk k010 --> 0xF002 0xFC07 ( 9 bits)   [alias for null]
+28.11036: 13/02/2022 15:31:14.828 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       k : 0x03F8
+28.11037: 13/02/2022 15:31:14.829 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction BRNE
+28.11038: 13/02/2022 15:31:14.829 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1111 01kk kkkk k001 --> 0xF401 0xFC07 ( 9 bits)   [alias for null]
+28.11039: 13/02/2022 15:31:14.829 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       k : 0x03F8
+28.11040: 13/02/2022 15:31:14.829 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction BRPL
+28.11041: 13/02/2022 15:31:14.829 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1111 01kk kkkk k010 --> 0xF402 0xFC07 ( 9 bits)   [alias for null]
+28.11042: 13/02/2022 15:31:14.829 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       k : 0x03F8
+28.11043: 13/02/2022 15:31:14.829 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction BRSH
+28.11044: 13/02/2022 15:31:14.829 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1111 01kk kkkk k000 --> 0xF400 0xFC07 ( 9 bits)   [alias for null]
+28.11045: 13/02/2022 15:31:14.830 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       k : 0x03F8
+28.11046: 13/02/2022 15:31:14.830 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction BRTC
+28.11047: 13/02/2022 15:31:14.830 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1111 01kk kkkk k110 --> 0xF406 0xFC07 ( 9 bits)   [alias for null]
+28.11048: 13/02/2022 15:31:14.830 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       k : 0x03F8
+28.11049: 13/02/2022 15:31:14.830 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction BRTS
+28.11050: 13/02/2022 15:31:14.831 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1111 00kk kkkk k110 --> 0xF006 0xFC07 ( 9 bits)   [alias for null]
+28.11051: 13/02/2022 15:31:14.831 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       k : 0x03F8
+28.11052: 13/02/2022 15:31:14.831 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction BRVC
+28.11053: 13/02/2022 15:31:14.831 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1111 01kk kkkk k011 --> 0xF403 0xFC07 ( 9 bits)   [alias for null]
+28.11054: 13/02/2022 15:31:14.831 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       k : 0x03F8
+28.11055: 13/02/2022 15:31:14.831 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction BRVS
+28.11056: 13/02/2022 15:31:14.831 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1111 00kk kkkk k011 --> 0xF003 0xFC07 ( 9 bits)   [alias for null]
+28.11057: 13/02/2022 15:31:14.832 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       k : 0x03F8
+28.11058: 13/02/2022 15:31:14.832 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction BSET
+28.11059: 13/02/2022 15:31:14.832 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 0100 0sss 1000 --> 0x9408 0xFF8F (13 bits)   
+28.11060: 13/02/2022 15:31:14.832 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       s : 0x0070
+28.11061: 13/02/2022 15:31:14.832 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction BST
+28.11062: 13/02/2022 15:31:14.832 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1111 101r rrrr 0bbb --> 0xFA00 0xFE08 ( 8 bits)   
+28.11063: 13/02/2022 15:31:14.832 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       b : 0x0007
+28.11064: 13/02/2022 15:31:14.833 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       r : 0x01F0
+28.11065: 13/02/2022 15:31:14.833 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction CALL
+28.11066: 13/02/2022 15:31:14.833 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 010k kkkk 111k + --> 0x940E 0xFE0E (10 bits)   
+28.11067: 13/02/2022 15:31:14.833 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       k : 0x01F1
+28.11068: 13/02/2022 15:31:14.833 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction CBI
+28.11069: 13/02/2022 15:31:14.833 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 1000 AAAA Abbb --> 0x9800 0xFF00 ( 8 bits)   
+28.11070: 13/02/2022 15:31:14.833 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       b : 0x0007
+28.11071: 13/02/2022 15:31:14.834 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       A : 0x00F8
+28.11072: 13/02/2022 15:31:14.834 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction CBR
+28.11073: 13/02/2022 15:31:14.834 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    0111 KKKK dddd KKKK --> 0x7000 0xF000 ( 4 bits)   [alias for ANDI Rd, ($FF-K)]
+28.11074: 13/02/2022 15:31:14.834 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       K : 0x0F0F
+28.11075: 13/02/2022 15:31:14.834 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x00F0
+28.11076: 13/02/2022 15:31:14.835 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction CLC
+28.11077: 13/02/2022 15:31:14.835 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 0100 1000 1000 --> 0x9488 0xFFFF (16 bits)   [alias for BCLR 0]
+28.11078: 13/02/2022 15:31:14.835 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction CLH
+28.11079: 13/02/2022 15:31:14.835 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 0100 1101 1000 --> 0x94D8 0xFFFF (16 bits)   [alias for BCLR 5]
+28.11080: 13/02/2022 15:31:14.835 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction CLI
+28.11081: 13/02/2022 15:31:14.836 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 0100 1111 1000 --> 0x94F8 0xFFFF (16 bits)   [alias for BCLR 7]
+28.11082: 13/02/2022 15:31:14.836 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction CLN
+28.11083: 13/02/2022 15:31:14.836 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 0100 1010 1000 --> 0x94A8 0xFFFF (16 bits)   [alias for BCLR 2]
+28.11084: 13/02/2022 15:31:14.836 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction CLR
+28.11085: 13/02/2022 15:31:14.836 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    0010 01rd dddd rrrr --> 0x2400 0xFC00 ( 6 bits)   [alias for EOR Rd, Rd]
+28.11086: 13/02/2022 15:31:14.836 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       r : 0x020F
+28.11087: 13/02/2022 15:31:14.836 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x01F0
+28.11088: 13/02/2022 15:31:14.836 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction CLS
+28.11089: 13/02/2022 15:31:14.837 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 0100 1100 1000 --> 0x94C8 0xFFFF (16 bits)   [alias for BCLR 4]
+28.11090: 13/02/2022 15:31:14.837 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction CLT
+28.11091: 13/02/2022 15:31:14.837 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 0100 1110 1000 --> 0x94E8 0xFFFF (16 bits)   [alias for BCLR 6]
+28.11092: 13/02/2022 15:31:14.837 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction CLV
+28.11093: 13/02/2022 15:31:14.837 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 0100 1011 1000 --> 0x94B8 0xFFFF (16 bits)   [alias for BCLR 3]
+28.11094: 13/02/2022 15:31:14.837 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction CLZ
+28.11095: 13/02/2022 15:31:14.837 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 0100 1001 1000 --> 0x9498 0xFFFF (16 bits)   [alias for BCLR 1]
+28.11096: 13/02/2022 15:31:14.837 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction COM
+28.11097: 13/02/2022 15:31:14.838 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 010d dddd 0000 --> 0x9400 0xFE0F (11 bits)   
+28.11098: 13/02/2022 15:31:14.838 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x01F0
+28.11099: 13/02/2022 15:31:14.838 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction CP
+28.11100: 13/02/2022 15:31:14.838 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    0001 01rd dddd rrrr --> 0x1400 0xFC00 ( 6 bits)   
+28.11101: 13/02/2022 15:31:14.838 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       r : 0x020F
+28.11102: 13/02/2022 15:31:14.838 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x01F0
+28.11103: 13/02/2022 15:31:14.838 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction CPC
+28.11104: 13/02/2022 15:31:14.839 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    0000 01rd dddd rrrr --> 0x0400 0xFC00 ( 6 bits)   
+28.11105: 13/02/2022 15:31:14.839 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       r : 0x020F
+28.11106: 13/02/2022 15:31:14.839 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x01F0
+28.11107: 13/02/2022 15:31:14.839 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction CPI
+28.11108: 13/02/2022 15:31:14.839 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    0011 KKKK dddd KKKK --> 0x3000 0xF000 ( 4 bits)   
+28.11109: 13/02/2022 15:31:14.839 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       K : 0x0F0F
+28.11110: 13/02/2022 15:31:14.839 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x00F0
+28.11111: 13/02/2022 15:31:14.839 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction CPSE
+28.11112: 13/02/2022 15:31:14.839 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    0001 00rd dddd rrrr --> 0x1000 0xFC00 ( 6 bits)   
+28.11113: 13/02/2022 15:31:14.839 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       r : 0x020F
+28.11114: 13/02/2022 15:31:14.839 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x01F0
+28.11115: 13/02/2022 15:31:14.839 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction DEC
+28.11116: 13/02/2022 15:31:14.840 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 010d dddd 1010 --> 0x940A 0xFE0F (11 bits)   
+28.11117: 13/02/2022 15:31:14.840 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x01F0
+28.11118: 13/02/2022 15:31:14.840 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction DES
+28.11119: 13/02/2022 15:31:14.840 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 0100 KKKK 1011 --> 0x940B 0xFF0F (12 bits)   
+28.11120: 13/02/2022 15:31:14.840 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       K : 0x00F0
+28.11121: 13/02/2022 15:31:14.840 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction EICALL
+28.11122: 13/02/2022 15:31:14.840 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 0101 0001 1001 --> 0x9519 0xFFFF (16 bits)   
+28.11123: 13/02/2022 15:31:14.840 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction EIJMP
+28.11124: 13/02/2022 15:31:14.841 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 0100 0001 1001 --> 0x9419 0xFFFF (16 bits)   
+28.11125: 13/02/2022 15:31:14.841 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction ELPM
+28.11126: 13/02/2022 15:31:14.841 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 0101 1101 1000 --> 0x95D8 0xFFFF (16 bits)   
+28.11127: 13/02/2022 15:31:14.841 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction ELPM_Rd
+28.11128: 13/02/2022 15:31:14.841 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 000d dddd 011x --> 0x9006 0xFE0E (10 bits)   
+28.11129: 13/02/2022 15:31:14.841 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       x : 0x0001
+28.11130: 13/02/2022 15:31:14.841 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x01F0
+28.11131: 13/02/2022 15:31:14.841 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction EOR
+28.11132: 13/02/2022 15:31:14.841 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    0010 01rd dddd rrrr --> 0x2400 0xFC00 ( 6 bits)   
+28.11133: 13/02/2022 15:31:14.842 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       r : 0x020F
+28.11134: 13/02/2022 15:31:14.842 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x01F0
+28.11135: 13/02/2022 15:31:14.842 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction FMUL
+28.11136: 13/02/2022 15:31:14.842 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    0000 0011 0ddd 1rrr --> 0x0308 0xFF88 (10 bits)   
+28.11137: 13/02/2022 15:31:14.842 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       r : 0x0007
+28.11138: 13/02/2022 15:31:14.842 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x0070
+28.11139: 13/02/2022 15:31:14.843 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction FMULS
+28.11140: 13/02/2022 15:31:14.843 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    0000 0011 1ddd 0rrr --> 0x0380 0xFF88 (10 bits)   
+28.11141: 13/02/2022 15:31:14.843 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       r : 0x0007
+28.11142: 13/02/2022 15:31:14.843 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x0070
+28.11143: 13/02/2022 15:31:14.843 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction FMULSU
+28.11144: 13/02/2022 15:31:14.843 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    0000 0011 1ddd 1rrr --> 0x0388 0xFF88 (10 bits)   
+28.11145: 13/02/2022 15:31:14.843 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       r : 0x0007
+28.11146: 13/02/2022 15:31:14.843 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x0070
+28.11147: 13/02/2022 15:31:14.843 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction ICALL
+28.11148: 13/02/2022 15:31:14.844 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 0101 0000 1001 --> 0x9509 0xFFFF (16 bits)   
+28.11149: 13/02/2022 15:31:14.844 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction IJMP
+28.11150: 13/02/2022 15:31:14.844 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 0100 0000 1001 --> 0x9409 0xFFFF (16 bits)   
+28.11151: 13/02/2022 15:31:14.844 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction IN
+28.11152: 13/02/2022 15:31:14.844 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1011 0AAd dddd AAAA --> 0xB000 0xF800 ( 5 bits)   
+28.11153: 13/02/2022 15:31:14.844 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x01F0
+28.11154: 13/02/2022 15:31:14.844 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       A : 0x060F
+28.11155: 13/02/2022 15:31:14.844 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction INC
+28.11156: 13/02/2022 15:31:14.844 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 010d dddd 0011 --> 0x9403 0xFE0F (11 bits)   
+28.11157: 13/02/2022 15:31:14.844 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x01F0
+28.11158: 13/02/2022 15:31:14.844 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction JMP
+28.11159: 13/02/2022 15:31:14.845 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 010k kkkk 110k + --> 0x940C 0xFE0E (10 bits)   
+28.11160: 13/02/2022 15:31:14.845 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       k : 0x01F1
+28.11161: 13/02/2022 15:31:14.845 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction LAC
+28.11162: 13/02/2022 15:31:14.845 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 001d dddd 0110 --> 0x9206 0xFE0F (11 bits)   
+28.11163: 13/02/2022 15:31:14.845 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x01F0
+28.11164: 13/02/2022 15:31:14.845 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction LAS
+28.11165: 13/02/2022 15:31:14.845 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 001d dddd 0101 --> 0x9205 0xFE0F (11 bits)   
+28.11166: 13/02/2022 15:31:14.845 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x01F0
+28.11167: 13/02/2022 15:31:14.845 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction LAT
+28.11168: 13/02/2022 15:31:14.846 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 001d dddd 0111 --> 0x9207 0xFE0F (11 bits)   
+28.11169: 13/02/2022 15:31:14.846 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x01F0
+28.11170: 13/02/2022 15:31:14.846 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction LD
+28.11171: 13/02/2022 15:31:14.846 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 000d dddd rrrr --> 0x9000 0xFE00 ( 7 bits)   [alias for ST X|X+|-X | Y+|-Y | Z+|-Z, Rd]
+28.11172: 13/02/2022 15:31:14.846 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       r : 0x000F
+28.11173: 13/02/2022 15:31:14.846 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x01F0
+28.11174: 13/02/2022 15:31:14.846 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction LD_X
+28.11175: 13/02/2022 15:31:14.846 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 000d dddd 1100 --> 0x900C 0xFE0F (11 bits)   
+28.11176: 13/02/2022 15:31:14.846 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x01F0
+28.11177: 13/02/2022 15:31:14.847 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction LD_mX
+28.11178: 13/02/2022 15:31:14.847 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 000d dddd 1110 --> 0x900E 0xFE0F (11 bits)   
+28.11179: 13/02/2022 15:31:14.847 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x01F0
+28.11180: 13/02/2022 15:31:14.847 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction LD_Xp
+28.11181: 13/02/2022 15:31:14.847 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 000d dddd 1101 --> 0x900D 0xFE0F (11 bits)   
+28.11182: 13/02/2022 15:31:14.847 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x01F0
+28.11183: 13/02/2022 15:31:14.847 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction LD_mY
+28.11184: 13/02/2022 15:31:14.847 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 000d dddd 1010 --> 0x900A 0xFE0F (11 bits)   
+28.11185: 13/02/2022 15:31:14.847 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x01F0
+28.11186: 13/02/2022 15:31:14.847 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction LD_Yp
+28.11187: 13/02/2022 15:31:14.847 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 000d dddd 1001 --> 0x9009 0xFE0F (11 bits)   
+28.11188: 13/02/2022 15:31:14.848 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x01F0
+28.11189: 13/02/2022 15:31:14.848 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction LD_mZ
+28.11190: 13/02/2022 15:31:14.848 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 000d dddd 0010 --> 0x9002 0xFE0F (11 bits)   
+28.11191: 13/02/2022 15:31:14.848 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x01F0
+28.11192: 13/02/2022 15:31:14.848 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction LD_Zp
+28.11193: 13/02/2022 15:31:14.848 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 000d dddd 0001 --> 0x9001 0xFE0F (11 bits)   
+28.11194: 13/02/2022 15:31:14.848 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x01F0
+28.11195: 13/02/2022 15:31:14.848 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction LDD
+28.11196: 13/02/2022 15:31:14.848 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    10q0 qq0d dddd rqqq --> 0x8000 0xD200 ( 4 bits)   
+28.11197: 13/02/2022 15:31:14.849 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       r : 0x0008
+28.11198: 13/02/2022 15:31:14.849 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x01F0
+28.11199: 13/02/2022 15:31:14.849 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       q : 0x2C07
+28.11200: 13/02/2022 15:31:14.849 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction LDI
+28.11201: 13/02/2022 15:31:14.849 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1110 KKKK dddd KKKK --> 0xE000 0xF000 ( 4 bits)   
+28.11202: 13/02/2022 15:31:14.849 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       K : 0x0F0F
+28.11203: 13/02/2022 15:31:14.849 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x00F0
+28.11204: 13/02/2022 15:31:14.850 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction LDS16
+28.11205: 13/02/2022 15:31:14.850 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1010 0kkk dddd kkkk --> 0xA000 0xF800 ( 5 bits)   
+28.11206: 13/02/2022 15:31:14.850 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x00F0
+28.11207: 13/02/2022 15:31:14.850 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       k : 0x070F
+28.11208: 13/02/2022 15:31:14.850 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction LDS
+28.11209: 13/02/2022 15:31:14.850 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 000d dddd 0000 + --> 0x9000 0xFE0F (11 bits)   
+28.11210: 13/02/2022 15:31:14.850 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x01F0
+28.11211: 13/02/2022 15:31:14.850 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction LPM
+28.11212: 13/02/2022 15:31:14.850 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 0101 1100 1000 --> 0x95C8 0xFFFF (16 bits)   
+28.11213: 13/02/2022 15:31:14.850 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction LPM_Rd
+28.11214: 13/02/2022 15:31:14.851 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 000d dddd 010x --> 0x9004 0xFE0E (10 bits)   
+28.11215: 13/02/2022 15:31:14.851 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       x : 0x0001
+28.11216: 13/02/2022 15:31:14.851 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x01F0
+28.11217: 13/02/2022 15:31:14.851 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction LSL
+28.11218: 13/02/2022 15:31:14.851 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    0000 11rd dddd rrrr --> 0x0C00 0xFC00 ( 6 bits)   [alias for ADD Rd, Rd]
+28.11219: 13/02/2022 15:31:14.851 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       r : 0x020F
+28.11220: 13/02/2022 15:31:14.851 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x01F0
+28.11221: 13/02/2022 15:31:14.851 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction LSR
+28.11222: 13/02/2022 15:31:14.851 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 010d dddd 0110 --> 0x9406 0xFE0F (11 bits)   
+28.11223: 13/02/2022 15:31:14.851 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x01F0
+28.11224: 13/02/2022 15:31:14.851 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction MOV
+28.11225: 13/02/2022 15:31:14.851 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    0010 11rd dddd rrrr --> 0x2C00 0xFC00 ( 6 bits)   
+28.11226: 13/02/2022 15:31:14.852 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       r : 0x020F
+28.11227: 13/02/2022 15:31:14.852 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x01F0
+28.11228: 13/02/2022 15:31:14.852 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction MOVW
+28.11229: 13/02/2022 15:31:14.852 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    0000 0001 dddd rrrr --> 0x0100 0xFF00 ( 8 bits)   
+28.11230: 13/02/2022 15:31:14.852 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       r : 0x000F
+28.11231: 13/02/2022 15:31:14.852 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x00F0
+28.11232: 13/02/2022 15:31:14.852 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction MUL
+28.11233: 13/02/2022 15:31:14.852 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 11rd dddd rrrr --> 0x9C00 0xFC00 ( 6 bits)   
+28.11234: 13/02/2022 15:31:14.852 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       r : 0x020F
+28.11235: 13/02/2022 15:31:14.853 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x01F0
+28.11236: 13/02/2022 15:31:14.853 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction MULS
+28.11237: 13/02/2022 15:31:14.853 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    0000 0010 dddd rrrr --> 0x0200 0xFF00 ( 8 bits)   
+28.11238: 13/02/2022 15:31:14.853 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       r : 0x000F
+28.11239: 13/02/2022 15:31:14.853 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x00F0
+28.11240: 13/02/2022 15:31:14.853 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction MULSU
+28.11241: 13/02/2022 15:31:14.853 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    0000 0011 0ddd 0rrr --> 0x0300 0xFF88 (10 bits)   
+28.11242: 13/02/2022 15:31:14.853 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       r : 0x0007
+28.11243: 13/02/2022 15:31:14.853 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x0070
+28.11244: 13/02/2022 15:31:14.853 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction NEG
+28.11245: 13/02/2022 15:31:14.853 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 010d dddd 0001 --> 0x9401 0xFE0F (11 bits)   
+28.11246: 13/02/2022 15:31:14.853 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x01F0
+28.11247: 13/02/2022 15:31:14.854 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction NOP
+28.11248: 13/02/2022 15:31:14.854 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    0000 0000 0000 0000 --> 0x0000 0xFFFF (16 bits)   
+28.11249: 13/02/2022 15:31:14.854 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction OR
+28.11250: 13/02/2022 15:31:14.854 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    0010 10rd dddd rrrr --> 0x2800 0xFC00 ( 6 bits)   
+28.11251: 13/02/2022 15:31:14.854 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       r : 0x020F
+28.11252: 13/02/2022 15:31:14.854 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x01F0
+28.11253: 13/02/2022 15:31:14.854 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction ORI
+28.11254: 13/02/2022 15:31:14.854 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    0110 KKKK dddd KKKK --> 0x6000 0xF000 ( 4 bits)   
+28.11255: 13/02/2022 15:31:14.854 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       K : 0x0F0F
+28.11256: 13/02/2022 15:31:14.854 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x00F0
+28.11257: 13/02/2022 15:31:14.855 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction OUT
+28.11258: 13/02/2022 15:31:14.855 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1011 1AAr rrrr AAAA --> 0xB800 0xF800 ( 5 bits)   
+28.11259: 13/02/2022 15:31:14.855 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       r : 0x01F0
+28.11260: 13/02/2022 15:31:14.855 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       A : 0x060F
+28.11261: 13/02/2022 15:31:14.855 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction POP
+28.11262: 13/02/2022 15:31:14.855 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 000d dddd 1111 --> 0x900F 0xFE0F (11 bits)   
+28.11263: 13/02/2022 15:31:14.855 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x01F0
+28.11264: 13/02/2022 15:31:14.855 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction PUSH
+28.11265: 13/02/2022 15:31:14.855 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 001r rrrr 1111 --> 0x920F 0xFE0F (11 bits)   
+28.11266: 13/02/2022 15:31:14.855 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       r : 0x01F0
+28.11267: 13/02/2022 15:31:14.855 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction RCALL
+28.11268: 13/02/2022 15:31:14.855 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1101 kkkk kkkk kkkk --> 0xD000 0xF000 ( 4 bits)   
+28.11269: 13/02/2022 15:31:14.855 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       k : 0x0FFF
+28.11270: 13/02/2022 15:31:14.855 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction RET
+28.11271: 13/02/2022 15:31:14.856 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 0101 0000 1000 --> 0x9508 0xFFFF (16 bits)   
+28.11272: 13/02/2022 15:31:14.856 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction RETI
+28.11273: 13/02/2022 15:31:14.856 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 0101 0001 1000 --> 0x9518 0xFFFF (16 bits)   
+28.11274: 13/02/2022 15:31:14.856 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction RJMP
+28.11275: 13/02/2022 15:31:14.856 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1100 kkkk kkkk kkkk --> 0xC000 0xF000 ( 4 bits)   
+28.11276: 13/02/2022 15:31:14.856 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       k : 0x0FFF
+28.11277: 13/02/2022 15:31:14.856 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction ROL
+28.11278: 13/02/2022 15:31:14.856 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    0001 11rd dddd rrrr --> 0x1C00 0xFC00 ( 6 bits)   [alias for ADC Rd, Rd]
+28.11279: 13/02/2022 15:31:14.856 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       r : 0x020F
+28.11280: 13/02/2022 15:31:14.856 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x01F0
+28.11281: 13/02/2022 15:31:14.856 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction ROR
+28.11282: 13/02/2022 15:31:14.856 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 010d dddd 0111 --> 0x9407 0xFE0F (11 bits)   
+28.11283: 13/02/2022 15:31:14.856 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x01F0
+28.11284: 13/02/2022 15:31:14.856 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction SBC
+28.11285: 13/02/2022 15:31:14.857 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    0000 10rd dddd rrrr --> 0x0800 0xFC00 ( 6 bits)   
+28.11286: 13/02/2022 15:31:14.857 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       r : 0x020F
+28.11287: 13/02/2022 15:31:14.857 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x01F0
+28.11288: 13/02/2022 15:31:14.857 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction SBCI
+28.11289: 13/02/2022 15:31:14.857 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    0100 KKKK dddd KKKK --> 0x4000 0xF000 ( 4 bits)   
+28.11290: 13/02/2022 15:31:14.857 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       K : 0x0F0F
+28.11291: 13/02/2022 15:31:14.857 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x00F0
+28.11292: 13/02/2022 15:31:14.857 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction SBI
+28.11293: 13/02/2022 15:31:14.857 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 1010 AAAA Abbb --> 0x9A00 0xFF00 ( 8 bits)   
+28.11294: 13/02/2022 15:31:14.857 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       b : 0x0007
+28.11295: 13/02/2022 15:31:14.857 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       A : 0x00F8
+28.11296: 13/02/2022 15:31:14.857 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction SBIC
+28.11297: 13/02/2022 15:31:14.857 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 1001 AAAA Abbb --> 0x9900 0xFF00 ( 8 bits)   
+28.11298: 13/02/2022 15:31:14.857 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       b : 0x0007
+28.11299: 13/02/2022 15:31:14.857 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       A : 0x00F8
+28.11300: 13/02/2022 15:31:14.857 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction SBIS
+28.11301: 13/02/2022 15:31:14.858 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 1011 AAAA Abbb --> 0x9B00 0xFF00 ( 8 bits)   
+28.11302: 13/02/2022 15:31:14.858 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       b : 0x0007
+28.11303: 13/02/2022 15:31:14.858 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       A : 0x00F8
+28.11304: 13/02/2022 15:31:14.858 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction SBIW
+28.11305: 13/02/2022 15:31:14.858 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 0111 KKdd KKKK --> 0x9700 0xFF00 ( 8 bits)   
+28.11306: 13/02/2022 15:31:14.858 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       K : 0x00CF
+28.11307: 13/02/2022 15:31:14.858 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x0030
+28.11308: 13/02/2022 15:31:14.858 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction SBR
+28.11309: 13/02/2022 15:31:14.858 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    0110 KKKK dddd KKKK --> 0x6000 0xF000 ( 4 bits)   [alias for ORI Rd, K]
+28.11310: 13/02/2022 15:31:14.858 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       K : 0x0F0F
+28.11311: 13/02/2022 15:31:14.859 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x00F0
+28.11312: 13/02/2022 15:31:14.859 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction SBRC
+28.11313: 13/02/2022 15:31:14.859 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1111 110r rrrr 0bbb --> 0xFC00 0xFE08 ( 8 bits)   
+28.11314: 13/02/2022 15:31:14.859 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       b : 0x0007
+28.11315: 13/02/2022 15:31:14.859 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       r : 0x01F0
+28.11316: 13/02/2022 15:31:14.859 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction SBRS
+28.11317: 13/02/2022 15:31:14.859 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1111 111r rrrr 0bbb --> 0xFE00 0xFE08 ( 8 bits)   
+28.11318: 13/02/2022 15:31:14.859 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       b : 0x0007
+28.11319: 13/02/2022 15:31:14.859 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       r : 0x01F0
+28.11320: 13/02/2022 15:31:14.859 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction SEC
+28.11321: 13/02/2022 15:31:14.859 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 0100 0000 1000 --> 0x9408 0xFFFF (16 bits)   [alias for BSET 0]
+28.11322: 13/02/2022 15:31:14.859 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction SEH
+28.11323: 13/02/2022 15:31:14.860 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 0100 0101 1000 --> 0x9458 0xFFFF (16 bits)   [alias for BSET 5]
+28.11324: 13/02/2022 15:31:14.860 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction SEI
+28.11325: 13/02/2022 15:31:14.860 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 0100 0111 1000 --> 0x9478 0xFFFF (16 bits)   [alias for BSET 7]
+28.11326: 13/02/2022 15:31:14.860 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction SEN
+28.11327: 13/02/2022 15:31:14.860 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 0100 0010 1000 --> 0x9428 0xFFFF (16 bits)   [alias for BSET 2]
+28.11328: 13/02/2022 15:31:14.860 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction SER
+28.11329: 13/02/2022 15:31:14.860 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1110 1111 dddd 1111 --> 0xEF0F 0xFF0F (12 bits)   [alias for LDI Rd, $FF]
+28.11330: 13/02/2022 15:31:14.860 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x00F0
+28.11331: 13/02/2022 15:31:14.860 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction SES
+28.11332: 13/02/2022 15:31:14.861 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 0100 0100 1000 --> 0x9448 0xFFFF (16 bits)   [alias for BSET 4]
+28.11333: 13/02/2022 15:31:14.861 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction SET
+28.11334: 13/02/2022 15:31:14.861 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 0100 0110 1000 --> 0x9468 0xFFFF (16 bits)   [alias for BSET 6]
+28.11335: 13/02/2022 15:31:14.861 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction SEV
+28.11336: 13/02/2022 15:31:14.861 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 0100 0011 1000 --> 0x9438 0xFFFF (16 bits)   [alias for BSET 3]
+28.11337: 13/02/2022 15:31:14.861 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction SEZ
+28.11338: 13/02/2022 15:31:14.861 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 0100 0001 1000 --> 0x9418 0xFFFF (16 bits)   [alias for BSET 1]
+28.11339: 13/02/2022 15:31:14.861 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction SLEEP
+28.11340: 13/02/2022 15:31:14.861 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 0101 1000 1000 --> 0x9588 0xFFFF (16 bits)   
+28.11341: 13/02/2022 15:31:14.861 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction SPM
+28.11342: 13/02/2022 15:31:14.862 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 0101 111x 1000 --> 0x95E8 0xFFEF (15 bits)   
+28.11343: 13/02/2022 15:31:14.862 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       x : 0x0010
+28.11344: 13/02/2022 15:31:14.862 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction ST
+28.11345: 13/02/2022 15:31:14.862 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 001r rrrr dddd --> 0x9200 0xFE00 ( 7 bits)   [alias for ST X|X+|-X | Y+|-Y | Z+|-Z, Rd]
+28.11346: 13/02/2022 15:31:14.862 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       r : 0x01F0
+28.11347: 13/02/2022 15:31:14.862 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x000F
+28.11348: 13/02/2022 15:31:14.862 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction ST_X
+28.11349: 13/02/2022 15:31:14.862 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 001r rrrr 1100 --> 0x920C 0xFE0F (11 bits)   
+28.11350: 13/02/2022 15:31:14.862 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       r : 0x01F0
+28.11351: 13/02/2022 15:31:14.862 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction ST_mX
+28.11352: 13/02/2022 15:31:14.863 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 001r rrrr 1110 --> 0x920E 0xFE0F (11 bits)   
+28.11353: 13/02/2022 15:31:14.863 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       r : 0x01F0
+28.11354: 13/02/2022 15:31:14.863 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction ST_Xp
+28.11355: 13/02/2022 15:31:14.863 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 001r rrrr 1101 --> 0x920D 0xFE0F (11 bits)   
+28.11356: 13/02/2022 15:31:14.863 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       r : 0x01F0
+28.11357: 13/02/2022 15:31:14.863 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction ST_mY
+28.11358: 13/02/2022 15:31:14.863 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 001r rrrr 1010 --> 0x920A 0xFE0F (11 bits)   
+28.11359: 13/02/2022 15:31:14.863 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       r : 0x01F0
+28.11360: 13/02/2022 15:31:14.863 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction ST_Yp
+28.11361: 13/02/2022 15:31:14.863 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 001r rrrr 1001 --> 0x9209 0xFE0F (11 bits)   
+28.11362: 13/02/2022 15:31:14.864 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       r : 0x01F0
+28.11363: 13/02/2022 15:31:14.864 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction ST_mZ
+28.11364: 13/02/2022 15:31:14.864 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 001r rrrr 0010 --> 0x9202 0xFE0F (11 bits)   
+28.11365: 13/02/2022 15:31:14.864 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       r : 0x01F0
+28.11366: 13/02/2022 15:31:14.864 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction ST_Zp
+28.11367: 13/02/2022 15:31:14.865 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 001r rrrr 0001 --> 0x9201 0xFE0F (11 bits)   
+28.11368: 13/02/2022 15:31:14.865 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       r : 0x01F0
+28.11369: 13/02/2022 15:31:14.865 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction STD
+28.11370: 13/02/2022 15:31:14.865 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    10q0 qq1r rrrr dqqq --> 0x8200 0xD200 ( 4 bits)   
+28.11371: 13/02/2022 15:31:14.865 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       r : 0x01F0
+28.11372: 13/02/2022 15:31:14.865 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x0008
+28.11373: 13/02/2022 15:31:14.865 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       q : 0x2C07
+28.11374: 13/02/2022 15:31:14.865 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction STS16
+28.11375: 13/02/2022 15:31:14.866 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1010 1kkk rrrr kkkk --> 0xA800 0xF800 ( 5 bits)   
+28.11376: 13/02/2022 15:31:14.866 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       r : 0x00F0
+28.11377: 13/02/2022 15:31:14.866 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       k : 0x070F
+28.11378: 13/02/2022 15:31:14.866 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction STS
+28.11379: 13/02/2022 15:31:14.866 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 001r rrrr 0000 + --> 0x9200 0xFE0F (11 bits)   
+28.11380: 13/02/2022 15:31:14.866 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       r : 0x01F0
+28.11381: 13/02/2022 15:31:14.866 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction SUB
+28.11382: 13/02/2022 15:31:14.867 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    0001 10rd dddd rrrr --> 0x1800 0xFC00 ( 6 bits)   
+28.11383: 13/02/2022 15:31:14.867 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       r : 0x020F
+28.11384: 13/02/2022 15:31:14.867 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x01F0
+28.11385: 13/02/2022 15:31:14.867 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction SUBI
+28.11386: 13/02/2022 15:31:14.867 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    0101 KKKK dddd KKKK --> 0x5000 0xF000 ( 4 bits)   
+28.11387: 13/02/2022 15:31:14.867 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       K : 0x0F0F
+28.11388: 13/02/2022 15:31:14.867 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x00F0
+28.11389: 13/02/2022 15:31:14.867 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction SWAP
+28.11390: 13/02/2022 15:31:14.867 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 001d dddd 0010 --> 0x9202 0xFE0F (11 bits)   
+28.11391: 13/02/2022 15:31:14.867 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x01F0
+28.11392: 13/02/2022 15:31:14.867 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction TST
+28.11393: 13/02/2022 15:31:14.867 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    0010 00rd dddd rrrr --> 0x2000 0xFC00 ( 6 bits)   [alias for AND Rd, Rd]
+28.11394: 13/02/2022 15:31:14.868 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       r : 0x020F
+28.11395: 13/02/2022 15:31:14.868 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x01F0
+28.11396: 13/02/2022 15:31:14.868 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction WDR
+28.11397: 13/02/2022 15:31:14.868 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 0101 1010 1000 --> 0x95A8 0xFFFF (16 bits)   
+28.11398: 13/02/2022 15:31:14.868 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction XCH
+28.11399: 13/02/2022 15:31:14.868 [be.lmenten.avr.core.instruction.InstructionSet.processOpcode] - [FINEST] -    1001 001d dddd 0100 --> 0x9204 0xFE0F (11 bits)   
+28.11400: 13/02/2022 15:31:14.868 [be.lmenten.avr.core.instruction.InstructionSet.lambda$processOpcode$0] - [FINEST] -       d : 0x01F0
+28.11401: 13/02/2022 15:31:14.868 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINER] - Processing instruction DATA
+28.11402: 13/02/2022 15:31:14.868 [be.lmenten.avr.core.instruction.InstructionSet.init] - [FINE] - Sorting opcode list (137 entries)
+
+	Parameters : 
+		0: 137
+
+28.11403: 13/02/2022 15:31:14.886 [be.lmenten.avr.core.CoreBase.<init>] - [INFO] - Core: ATmega2560
+28.11404: 13/02/2022 15:31:14.886 [be.lmenten.avr.core.CoreBase.<init>] - [FINE] -  > features : EXTERNAL_SRAM, BOOT_LOADER
+28.11405: 13/02/2022 15:31:14.886 [be.lmenten.avr.core.CoreBase.<init>] - [FINE] -  > fuse bytes : 3
+28.11406: 13/02/2022 15:31:14.887 [be.lmenten.avr.core.CoreBase.lambda$new$0] - [FINER] -     > HIGH_BYTE=1001_1000 { OCDEN=1, JTAGEN=0, SPIEN=0, WDTON=1, EESAVE=1, BOOTSZ1=0, BOOTSZ0=0, BOOTRST=0} [initial=0x98]
+28.11407: 13/02/2022 15:31:14.887 [be.lmenten.avr.core.CoreBase.lambda$new$0] - [FINER] -     > LOW_BYTE=0110_0010 { CKDIV8=0, CKOUT=1, SUT1=1, SUT0=0, CKSEL3=0, CKSEL2=0, CKSEL1=1, CKSEL0=0} [initial=0x62]
+28.11408: 13/02/2022 15:31:14.887 [be.lmenten.avr.core.CoreBase.lambda$new$0] - [FINER] -     > EXTENDED_BYTE=1111_1111 { BODLEVEL2=1, BODLEVEL1=1, BODLEVEL0=1} [initial=0xFF]
+28.11409: 13/02/2022 15:31:14.887 [be.lmenten.avr.core.CoreBase.<init>] - [FINE] -  > lockbits bytes : 1
+28.11410: 13/02/2022 15:31:14.888 [be.lmenten.avr.core.CoreBase.lambda$new$1] - [FINER] -     > LOCKBITS=1111_1111 { BLB12=1, BLB11=1, BLB02=1, BLB01=1, LB2=1, LB1=1} [initial=0xFF]
+28.11411: 13/02/2022 15:31:14.888 [be.lmenten.avr.core.CoreBase.<init>] - [INFO] - Flash size = 262144 bytes
+28.11412: 13/02/2022 15:31:14.890 [be.lmenten.avr.core.CoreBase.<init>] - [FINE] -  > Application section: 0x000000 (258048 bytes)
+28.11413: 13/02/2022 15:31:14.890 [be.lmenten.avr.core.CoreBase.<init>] - [FINE] -  > Boot loader section: 0x01F000 (4096 bytes)
+28.11414: 13/02/2022 15:31:14.890 [be.lmenten.avr.core.CoreBase.<init>] - [INFO] - Internal sram size = 32+64+416+8192 = 8704 bytes
+28.11415: 13/02/2022 15:31:14.891 [be.lmenten.avr.core.CoreBase.<init>] - [FINE] -  > 32 general registers
+28.11416: 13/02/2022 15:31:14.891 [be.lmenten.avr.core.CoreBase.<init>] - [FINE] -  > 64 I/O registers
+28.11417: 13/02/2022 15:31:14.892 [be.lmenten.avr.core.CoreBase.<init>] - [FINE] -  > 416 extended I/O registers
+28.11418: 13/02/2022 15:31:14.895 [be.lmenten.avr.core.CoreBase.<init>] - [INFO] - ++ Loading external memory driver
+28.11419: 13/02/2022 15:31:14.896 [be.lmenten.avr.core.driver.xmemory.ExternalMemoryDriver.<init>] - [INFO] -  > External memory size = null bytes
+28.11420: 13/02/2022 15:31:14.896 [be.lmenten.avr.core.Core.registerDriver] - [INFO] - Registering driver 'externalRam-control'.
+28.11421: 13/02/2022 15:31:14.896 [be.lmenten.avr.core.CoreBase.<init>] - [INFO] - ++ Loading eeprom driver
+28.11422: 13/02/2022 15:31:14.898 [be.lmenten.avr.core.driver.eeprom.EepromDriver.<init>] - [INFO] -  > Eeprom size = 4096 bytes
+28.11423: 13/02/2022 15:31:14.898 [be.lmenten.avr.core.Core.registerDriver] - [INFO] - Registering driver 'eeprom-control'.
+28.11424: 13/02/2022 15:31:14.900 [be.lmenten.avr.core.Core.registerDriver] - [INFO] - Registering driver 'surveyor'.
+28.11425: 13/02/2022 15:31:14.900 [be.lmenten.avr.core.Core.registerDriver] - [INFO] - Registering driver 'watchdog-control'.
+28.13613: 13/02/2022 15:31:18.741 [be.lmenten.avr.simulator.AvrAssemblerStudio.stop] - [INFO] - Finishing application ...
+28.13614: 13/02/2022 15:31:18.742 [be.lmenten.utils.app.fx.FxApplication.stop] - [FINE] - FxApplication.stop() ...
+28.13615: 13/02/2022 15:31:18.742 [be.lmenten.utils.app.fx.FxApplication.stop] - [FINER] - Keeping log file ".\logs\AvrAssemblerStudio-20220213-153111.log"
+1.13703: 13/02/2022 15:31:18.800 [be.lmenten.avr.simulator.FxLauncher$Proxy.main] - [INFO] - Application finished.
+1.13704: 13/02/2022 15:31:18.800 [be.lmenten.avr.simulator.FxLauncher$Proxy.main] - [INFO] - Running time : 00:00:07.171

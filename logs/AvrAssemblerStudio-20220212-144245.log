@@ -1,0 +1,19 @@
+24.4: 12/02/2022 14:42:45.918 [be.lmenten.utils.app.fx.FxApplication.init] - [FINER] - Installing log source filter
+28.5: 12/02/2022 14:42:45.930 [be.lmenten.utils.app.fx.FxApplication.start] - [FINE] - FxApplication.start() ...
+28.257: 12/02/2022 14:42:46.293 [be.lmenten.utils.app.fx.FxApplication.logRuntimeInformation] - [CONFIG] - Operating system: Windows 10 (10.0) amd64
+28.258: 12/02/2022 14:42:46.294 [be.lmenten.utils.app.fx.FxApplication.logRuntimeInformation] - [CONFIG] - Java VM: Java HotSpot(TM) 64-Bit Server VM (17.0.1+12-LTS-39) mixed mode, sharing
+28.259: 12/02/2022 14:42:46.296 [be.lmenten.utils.app.fx.FxApplication.logRuntimeInformation] - [CONFIG] - Java runtime: Java(TM) SE Runtime Environment (17.0.1+12-LTS-39)
+28.260: 12/02/2022 14:42:46.298 [be.lmenten.utils.app.fx.FxApplication.logRuntimeInformation] - [CONFIG] - JavaFX runtime: 17.0.1 (17.0.1+1)
+28.261: 12/02/2022 14:42:46.302 [be.lmenten.utils.app.fx.FxApplication.logRuntimeInformation] - [CONFIG] - App version: 1.0.1-ea0-1-devel (build 1, 2022-01-16T16:22:04)
+28.262: 12/02/2022 14:42:46.303 [be.lmenten.utils.app.fx.FxApplication.logRuntimeInformation] - [CONFIG] - Running from JAR: Yes
+28.263: 12/02/2022 14:42:46.303 [be.lmenten.utils.app.fx.FxApplication.logRuntimeInformation] - [CONFIG] - Debug mode: ENABLED
+28.264: 12/02/2022 14:42:46.304 [be.lmenten.utils.app.fx.FxApplication.logRuntimeInformation] - [CONFIG] - Log output style: Ansi
+28.265: 12/02/2022 14:42:46.304 [be.lmenten.utils.app.fx.FxApplication.logRuntimeInformation] - [CONFIG] - Log level: All
+28.266: 12/02/2022 14:42:46.304 [be.lmenten.utils.app.fx.FxApplication.logRuntimeInformation] - [CONFIG] - Log filter: be.lmenten.*
+28.267: 12/02/2022 14:42:46.305 [be.lmenten.utils.app.fx.FxApplication.logRuntimeInformation] - [CONFIG] - Log file: .\logs\AvrAssemblerStudio-20220212-144245.log
+28.268: 12/02/2022 14:42:46.306 [be.lmenten.utils.app.fx.FxApplication.logRuntimeInformation] - [CONFIG] - Keep logfile: true
+28.269: 12/02/2022 14:42:46.307 [be.lmenten.utils.app.fx.FxApplication.logRuntimeInformation] - [CONFIG] - Show log window: true
+28.270: 12/02/2022 14:42:46.307 [be.lmenten.utils.app.fx.FxApplication.logRuntimeInformation] - [CONFIG] - Show exception window: true
+28.271: 12/02/2022 14:42:46.307 [be.lmenten.utils.app.fx.FxApplication.logRuntimeInformation] - [CONFIG] - Locale: en_GB
+28.272: 12/02/2022 14:42:46.308 [be.lmenten.avr.simulator.AvrAssemblerStudio.start] - [INFO] - Application running ...
+28.3655: 12/02/2022 14:42:46.900 [be.lmenten.avr.simulator.AvrAssemblerStudio.stop] - [INFO] - Finishing application ...

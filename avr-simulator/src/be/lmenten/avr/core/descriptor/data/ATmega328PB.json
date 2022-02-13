@@ -1,0 +1,233 @@
+{
+	"file" : {
+		"version"				: "1.0.2",
+		"date"					: "2021/08/20",
+		"author"				: "Laurent Menten <laurent.menten@gmail.com>",
+
+		"notes"					: ""
+	},
+
+	"core" : {
+		"name"					: "ATmega328PB",
+		"version"				: "V2E",
+		"core_version"			: "AVRe+",
+		"missing_instructions"	: [ "ELPM", "EIJMP", "EICALL" ],
+		"signature"				: [ "0x1e", "0x95", "0x16" ],
+		"features"				: [
+			"BOOT_LOADER"
+		],
+
+		"flash"					: { "base" : "0x00000", "size" : "32K" },
+		"pc_width"				: "14",
+		"vector_size"			: "2",
+
+		"page_size"          : "64",
+		"rww"					   : { "base" : "0x00000", "limit" : "0x037FF" },
+		"nrww"					: { "base" : "0x03800", "limit" : "0x03FFF" },
+
+      "bootsz"             : [
+         { "base" : "0x03800", "limit" : "0x03FFF", "comment" : "BOOTSZ[0..1]=00" },
+         { "base" : "0x03C00", "limit" : "0x03FFF", "comment" : "BOOTSZ[0..1]=01" },
+         { "base" : "0x03E00", "limit" : "0x03FFF", "comment" : "BOOTSZ[0..1]=10" },
+         { "base" : "0x03F00", "limit" : "0x03FFF", "comment" : "BOOTSZ[0..1]=11" }
+      ],
+
+		"registers"				: { "base" : "0x0000", "size" : "32" },
+		"io"					: { "base" : "0x0020", "size" : "64" },
+		"extended_io"			: { "base" : "0x0060", "size" : "160" },
+		"sram"					: { "base" : "0x0100", "size" : "2K" },
+
+		"eeprom"				   : { "base" : "0x0000", "size" : "1K" },
+		"eeaddr_width"			: "10"
+	},
+
+	"symbols" : [
+		{ "name" : "FLASHEND",			"value" : "0x03FFF" },
+		{ "name" : "IOEND",				"value" : "0x00FF" },
+		{ "name" : "SRAM_START",		"value" : "0x0100" },
+		{ "name" : "SRAM_SIZE",			"value" : "2048" },
+		{ "name" : "RAMEND",			   "value" : "0x08FF" },
+		{ "name" : "EEPROMEND",			"value" : "0x03FF" },
+		{ "name" : "E2END",				"value" : "EEPROMEND", "comment": "!!! alias !!!" },
+		{ "name" : "EEADRBITS",			"value" : "10" },
+
+		{ "name" : "RWW_START_ADDR",	"value" : "0x00000" },
+		{ "name" : "RWW_STOP_ADDR",	"value" : "0x037FF" },
+		{ "name" : "NRWW_START_ADDR",	"value" : "0x03800" },
+		{ "name" : "NRWW_STOP_ADDR",	"value" : "0x03FFF" },
+		{ "name" : "PAGESIZE",			"value" : "128" },
+
+		{ "name" : "FIRSTBOOTSTART",	"value" : "0x03F00" },
+		{ "name" : "SECONDBOOTSTART",	"value" : "0x03E00" },
+		{ "name" : "THIRDBOOTSTART",	"value" : "0x03C00" },
+		{ "name" : "FOURTHBOOTSTART",	"value" : "0x03800" },		
+		{ "name" : "SMALLBOOTSTART",	"value" : "FIRSTBOOTSTART", "comment" : "!!! alias !!!" },
+		{ "name" : "LARGEBOOTSTART",	"value" : "FOURTHBOOTSTART", "comment" : "!!! alias !!!" }
+	],
+
+
+	"fuses" : [
+		{ "name" : "LOW_BYTE", "bits" : [ "CKDIV8", "CKOUT", "SUT1", "SUT0", "CKSEL3", "CKSEL2", "CKSEL1", "CKSEL0" ], "default" : "0b01100010" },
+		{ "name" : "HIGH_BYTE", "bits" : [ "OCDEN", "JTAGEN", "SPIEN", "WDTON", "EESAVE", "BOOTSZ1", "BOOTSZ0", "BOOTRST" ], "default" : "0b10011001" },
+		{ "name" : "EXTENDED_BYTE", "bits" : [ null, null, null, null, null, "BODLEVEL2", "BODLEVEL1", "BODLEVEL0" ], "mask": "0b0000_0111", "default" : "0b11111_111" }
+	],
+
+	"lock_bits" : [
+		{ "name" : "LOCKBITS", "bits" : [ null, null, "BLB12", "BLB11", "BLB02", "BLB01", "LB2", "LB1" ], "mask": "0b0011_1111", "default" : "0b11_111111" }
+	],
+
+	"interrupts" : [
+		{ "vector" : "0", "name" : "RESET" },
+
+		{ "vector" : "1", "name" : "INT0" },
+		{ "vector" : "2", "name" : "INT1" },
+		{ "vector" : "3", "name" : "PCINT0" },
+		{ "vector" : "4", "name" : "PCINT1" },
+		{ "vector" : "5", "name" : "PCINT2" },
+		{ "vector" : "6", "name" : "WDT" },
+		{ "vector" : "7", "name" : "TIMER2_COMPA" },
+		{ "vector" : "8", "name" : "TIMER2_COMPB" },
+		{ "vector" : "9", "name" : "TIMER2_OVF" },
+		{ "vector" : "10", "name" : "TIMER1_CAPT" },
+		{ "vector" : "11", "name" : "TIMER1_COMPA" },
+		{ "vector" : "12", "name" : "TIMER1_COMPB" },
+		{ "vector" : "13", "name" : "TIMER1_OVF" },
+		{ "vector" : "14", "name" : "TIMER0_COMPA" },
+		{ "vector" : "15", "name" : "TIMER0_COMPB" },
+		{ "vector" : "16", "name" : "TIMER0_OVF" },
+		{ "vector" : "17", "name" : "SPI" },
+		{ "vector" : "18", "name" : "USART0_RX" },
+		{ "vector" : "19", "name" : "USART0_UDRE" },
+		{ "vector" : "20", "name" : "USART0_TX" },
+		{ "vector" : "21", "name" : "ADC" },
+		{ "vector" : "32", "name" : "EE_READY" },
+		{ "vector" : "23", "name" : "ANALOG_COMP" },
+		{ "vector" : "34", "name" : "TWI" },
+		{ "vector" : "45", "name" : "SPM_READY" }
+	],
+
+	"io_map" : [
+		{ "address" : "0x0023", "name": "PINB", "bits" : [ "PINB7", "PINB6", "PINB5", "PINB4", "PINB3", "PINB2", "PINB1", "PINB0" ]  },
+		{ "address" : "0x0024", "name": "DDRB", "bits" : [ "DDB7", "DDB6", "DDB5", "DDB4", "DDB3", "DDB2", "DDB1", "DDB0" ]  },
+		{ "address" : "0x0025", "name": "PORTB", "bits" : [ "PORTB7", "PORTB6", "PORTB5", "PORTB4", "PORTB3", "PORTB2", "PORTB1", "PORTB0" ]  },
+
+		{ "address" : "0x0026", "name": "PINC", "bits" : [ null, "PINC6", "PINC5", "PINC4", "PINC3", "PINC2", "PINC1", "PINC0" ]  },
+		{ "address" : "0x0027", "name": "DDRC", "bits" : [ null, "DDC6", "DDC5", "DDC4", "DDC3", "DDC2", "DDC1", "DDC0" ]  },
+		{ "address" : "0x0028", "name": "PORTC", "bits" : [ null, "PORTC6", "PORTC5", "PORTC4", "PORTC3", "PORTC2", "PORTC1", "PORTC0" ]  },
+
+		{ "address" : "0x0029", "name": "PIND", "bits" : [ "PIND7", "PIND6", "PIND5", "PIND4", "PIND3", "PIND2", "PIND1", "PIND0" ]  },
+		{ "address" : "0x002A", "name": "DDRD", "bits" : [ "DDD7", "DDD6", "DDD5", "DDD4", "DDD3", "DDD2", "DDD1", "DDD0" ]  },
+		{ "address" : "0x002B", "name": "PORTD", "bits" : [ "PORTD7", "PORTD6", "PORTD5", "PORTD4", "PORTD3", "PORTD2", "PORTD1", "PORTD0" ]  },
+
+		{ "address" : "0x0035", "name": "TIFR0", "bits" : [ null, null, null, null, null, "OCF0B", "OCF0A", "TOV0" ], "mask" : "0b00000111" },
+		{ "address" : "0x0036", "name": "TIFR1", "bits" : [ null, null, "ICF1", null, null, "OCF1B", "OCF1A", "TOV1" ], "mask" : "0b00101111" },
+		{ "address" : "0x0037", "name": "TIFR2", "bits" : [ null, null, null, null, null, "OCF2B", "OCF2A", "TOV2" ], "mask" : "0b00000111" },
+
+		{ "address" : "0x003B", "name": "PCIFR", "bits" : [ null, null, null, null, null, "PCIF2", "PCIF1", "PCIF0" ] },
+		{ "address" : "0x003C", "name": "EIFR", "bits" : [ null, null, null, null, null, null, "INTF1", "INTF0" ] },
+		{ "address" : "0x003D", "name": "EIMSK", "bits" : [ null, null, null, null, null, null, "INT1", "INT0" ] },
+
+		{ "address" : "0x003E", "name": "GPIOR0" },
+
+		{ "address" : "0x003F", "name": "EECR", "bits" : [ null, null, "EEPM1", "EEPM0", "EERIE", "EEMPE", "EEPE", "EERE" ] },
+		{ "address" : "0x0040", "name": "EEDR" },
+		{ "address" : "0x0041", "name": "EEARL" },
+		{ "address" : "0x0042", "name": "EEARH" },
+
+		{ "address" : "0x0043", "name": "GTCCR", "bits" : [ "TSM", null, null, null, null, null, "PSRASY", "PSRSYNC" ] },
+
+		{ "address" : "0x0044", "name": "TCCR0A", "bits" : [ "COM0A1", "COM0A0", "COM0B1", "COM0B0", null, null, "WGM01", "WGM00" ] },
+		{ "address" : "0x0045", "name": "TCCR0B", "bits" : [ "FOC0A", "FOC0B", null, null, "WGM02", "CS02", "CS01", "CS00" ] },
+		{ "address" : "0x0046", "name": "TCNT0" },
+		{ "address" : "0x0047", "name": "OCR0A" },
+		{ "address" : "0x0048", "name": "OCR0B" },
+
+		{ "address" : "0x004A", "name": "GPIOR1" },
+		{ "address" : "0x004B", "name": "GPIOR2" },
+
+		{ "address" : "0x004C", "name": "SPCR", "bits" : [ "SPIE", "SPE", "DORD", "MSTR", "CPOL", "CPHA", "SPR1", "SPR0" ] },
+		{ "address" : "0x004D", "name": "SPSR", "bits" : [ "SPIF", "WCOL", null, null, null, null, null, "SPI2X" ] },
+		{ "address" : "0x004E", "name": "SPDR" },
+
+		{ "address" : "0x0050", "name": "ACSR", "bits" : [ "ACD", "ACBG", "ACO", "ACI", "ACIE", "ACIC", "ACIS1", "ACIS0" ] },
+
+		{ "address" : "0x0053", "name": "SMCR", "bits" : [ null, null, null, null, "SM2", "SM1", "SM0", "SE" ] },
+		{ "address" : "0x0054", "name": "MCUSR", "bits" : [ null, null, null, null, "WDRF", "BORF", "EXTRF", "PORF" ] },
+		{ "address" : "0x0055", "name": "MCUCR", "bits" : [ null, null, null, "PUD", null, null, "IVSEL", "IVCE" ] },
+
+		{ "address" : "0x0057", "name": "SPMCSR", "bits" : [ "SPMIE", "RWWSB", "SIGRD", "RWWSRE", "BLBSET", "PGWRT", "PGERS", "SPMEN" ] },
+
+		{ "address" : "0x005D", "name": "SPL" },
+		{ "address" : "0x005E", "name": "SPH", "mask" : "0b000000_111" },
+		{ "address" : "0x005F", "name": "SREG", "bits" : [ "I", "T", "H", "S", "V", "N", "Z", "C" ] }
+	],
+
+	"extended_io_map" : [
+		{ "address" : "0x0060", "name": "WDTCSR", "bits" : [ "WDIF", "WDIE", "WDP3", "WDCE", "WDE", "WDP2", "WDP1", "WDP0" ] },
+		{ "address" : "0x0061", "name": "CLKPR", "bits" : [ "CLKPCE", null, null, null, "CLKPS3", "CLKPS2", "CLKPS1", "CLKPS0" ] },
+
+		{ "address" : "0x0064", "name": "PRR0", "bits" : [ "PRTWI", "PRTIM2", "PRTIM0", null, "PRTIM1", "PRSPI", "PRUSART0", "PRADC" ] },
+
+		{ "address" : "0x0066", "name": "OSCCAL" },
+
+		{ "address" : "0x0068", "name": "PCICR", "bits" : [ null, null, null, null, null, "PCIE2", "PCIE1", "PCIE0" ] },
+		{ "address" : "0x0069", "name": "EICRA", "bits" : [ null, null, null, null, "ISC11", "ISC10", "ISC01", "ISC00" ] },
+		{ "address" : "0x006B", "name": "PCMSK0", "bits" : [ "PCINT7", "PCINT6", "PCINT5", "PCINT4", "PCINT3", "PCINT2", "PCINT1", "PCINT0" ] },
+		{ "address" : "0x006C", "name": "PCMSK1", "bits" : [ null, "PCINT14", "PCINT13", "PCINT12", "PCINT11", "PCINT10", "PCINT9", "PCINT8" ] },
+		{ "address" : "0x006D", "name": "PCMSK2", "bits" : [ "PCINT23", "PCINT22", "PCINT21", "PCINT20", "PCINT19", "PCINT18", "PCINT17", "PCINT16" ] },
+
+		{ "address" : "0x006E", "name": "TIMSK0", "bits" : [ null, null, null, null, null, "OCIE0B", "OCIE0A", "TOIE0" ] },
+		{ "address" : "0x006F", "name": "TIMSK1", "bits" : [ null, null, "ICIE1", null, null, "OCIE1B", "OCIE1A", "TOIE1" ] },
+		{ "address" : "0x0070", "name": "TIMSK2", "bits" : [ null, null, null, null, null, "OCIE2B", "OCIE2A", "TOIE2" ] },
+
+		{ "address" : "0x0078", "name": "ADCL" },
+		{ "address" : "0x0079", "name": "ADCH" },
+		{ "address" : "0x007A", "name": "ADCSRA", "bits" : [ "ADEN", "ADSC", "ADATE", "ADIF", "ADIE", "ADPS2", "ADPS1", "ADPS0" ] },
+		{ "address" : "0x007B", "name": "ADCSRB", "bits" : [ null, "ACME", null, null, null, "ADTS2", "ADTS1", "ADTS0" ] },
+		{ "address" : "0x007C", "name": "ADMUX", "bits" : [ "REFS1", "REFS0", "ADLAR", null, "MUX3", "MUX2", "MUX1", "MUX0" ] },
+		{ "address" : "0x007E", "name": "DIDR0", "bits" : [ null, null, "ADC5D", "ADC4D", "ADC3D", "ADC2D", "ADC1D", "ADC0D" ] },
+		{ "address" : "0x007F", "name": "DIDR1", "bits" : [ null, null, null, null, null, null, "AIN1D", "AIN0D" ] },
+	
+		{ "address" : "0x0080", "name": "TCCR1A", "bits" : [ "COM1A1", "COM1A0", "COM1B1", "COM1B0", null, null, "WGM11", "WGM10" ] },
+		{ "address" : "0x0081", "name": "TCCR1B", "bits" : [ "ICNC1", "ICES1", null, "WGM13", "WGM12", "CS12", "CS11", "CS10" ] },
+		{ "address" : "0x0082", "name": "TCCR1C", "bits" : [ "FOC1A", "FOC1B", null, null, null, null, null, null ] },
+		{ "address" : "0x0084", "name": "TCNT1L" },
+		{ "address" : "0x0085", "name": "TCNT1H" },
+		{ "address" : "0x0086", "name": "ICR1L" },
+		{ "address" : "0x0087", "name": "ICR1H" },
+		{ "address" : "0x0088", "name": "OCR1AL" },
+		{ "address" : "0x0089", "name": "OCR1AH" },
+		{ "address" : "0x008A", "name": "OCR1BL" },
+		{ "address" : "0x008B", "name": "OCR1BH" },
+
+		{ "address" : "0x00B0", "name": "TCCR2A", "bits" : [ "COM2A1", "COM2A0", "COM2B1", "COM2B0", null, null, "WGM21", "WGM20" ] },
+		{ "address" : "0x00A1", "name": "TCCR2B", "bits" : [ "FOC2A", "FOC2B", null, null, "WGM22", "CS22", "CS21", "CS20" ] },
+		{ "address" : "0x00B2", "name": "TCNT2" },
+		{ "address" : "0x00B3", "name": "OCR2A" },
+		{ "address" : "0x00B4", "name": "OCR2B" },
+
+		{ "address" : "0x00B6", "name": "ASSR", "bits" : [ null, "EXCLK", "AS2", "TCN2UB", "OCR2AUB", "OCR2BUB", "TCR2AUB", "TCR2BUB" ] },
+
+		{ "address" : "0x00B8", "name": "TWBR" },
+		{ "address" : "0x00B9", "name": "TWSR", "bits" : [ "TWS7", "TWS6", "TWS5", "TWS4", "TWS3", null, "TWPS1", "TWPS0" ] },
+		{ "address" : "0x00BA", "name": "TWAR", "bits" : [ "TWA6", "TWA5", "TWA4", "TWA3", "TWA2", "TWA1", "TWA0", "TWGCE" ] },
+		{ "address" : "0x00BB", "name": "TWDR" },
+		{ "address" : "0x00BC", "name": "TWCR", "bits" : [ "TWINT", "TWEA", "TWSTA", "TWSTO", "TWWC", "TWEN", null, null ] },
+		{ "address" : "0x00BD", "name": "TWAMR" },
+
+		{ "address" : "0x00C0", "name": "UCSR0A", "bits" : [ "RXC0", "TXC0", "UDRE0", "FE0", "DOR0", "UPE0", "U2X0", "MPCM0" ] },
+		{ "address" : "0x00C1", "name": "UCSR0B", "bits" : [ "RXCIE0", "TXCIE0", "UDRIE0", "RXEN0", "TXEN0", "UCSZ02", "RXB80", "TXB80" ] },
+		{ "address" : "0x00C2", "name": "UCSR0C", "bits" : [ "UMSEL01", "UMSEL00", "UPM01", "UPM00", "USBS0", "UCSZ01", "UCSZ00", "UCPOL0" ] },
+		{ "address" : "0x00C4", "name": "UBRR0L" },
+		{ "address" : "0x00C5", "name": "UBRR0H" },
+		{ "address" : "0x00C6", "name": "UDR0" }
+	],
+
+	"simulator" : {
+		"comment" : "// FIXME add an array of name value for configuration",
+
+		"drivers" : [
+			{ "id" : "eeprom", "class" : "be.lmenten.avr.core.driver.eeprom.EepromDriver" }
+		],
+	}
+}

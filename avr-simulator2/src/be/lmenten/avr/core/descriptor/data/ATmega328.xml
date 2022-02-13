@@ -1,0 +1,251 @@
+<part name="ATmega328" version="AVRe+">
+
+    <interrupts>
+        <interupt vector="0" name="RESET" />
+
+        <interupt vector="1" name="INT0" />
+        <interupt vector="2" name="INT1" />
+
+        <interupt vector="3" name="PCINT0" />
+        <interupt vector="4" name="PCINT1" />
+        <interupt vector="5" name="PCINT2" />
+
+        <interupt vector="6" name="WDT" />
+
+        <interupt vector="7" name="TIMER2_COMPA" />
+        <interupt vector="8" name="TIMER2_COMPB" />
+        <interupt vector="9" name="TIMER2_OVF" />
+
+        <interupt vector="10" name="TIMER1_CAPT" />
+        <interupt vector="11" name="TIMER1_COMPA" />
+        <interupt vector="12" name="TIMER1_COMPB" />
+        <interupt vector="13" name="TIMER1_OVF" />
+
+        <interupt vector="14" name="TIMER0_COMPA" />
+        <interupt vector="15" name="TIMER0_COMPB" />
+        <interupt vector="16" name="TIMER0_OVF" />
+
+        <interupt vector="17" name="SPI" />
+
+        <interupt vector="18" name="USART0_RX" />
+        <interupt vector="19" name="USART0_UDRE" />
+        <interupt vector="20" name="USART0_TX" />
+
+        <interupt vector="21" name="ADC" />
+
+        <interupt vector="22" name="EE_READY" />
+
+        <interupt vector="23" name="ANALOG_COMP" />
+
+        <interupt vector="34" name="TWI" />
+
+        <interupt vector="45" name="SPM_READY" />
+    </interrupts>
+
+    <registers name="r" address="0x0000" size="32">
+        <register name="R0" />
+        <register name="R1" />
+        <register name="R2" />
+        <register name="R3" />
+        <register name="R4" />
+        <register name="R5" />
+        <register name="R6" />
+        <register name="R7" />
+        <register name="R8" />
+        <register name="R9" />
+        <register name="R10" />
+        <register name="R11" />
+        <register name="R12" />
+        <register name="R13" />
+        <register name="R14" />
+        <register name="R15" />
+        <register name="R16" />
+        <register name="R17" />
+        <register name="R18" />
+        <register name="R19" />
+        <register name="R20" />
+        <register name="R21" />
+        <register name="R22" />
+        <register name="R23" />
+        <register name="R24" />
+        <register name="R25" />
+        <register name="R26" />
+        <register name="R27" />
+        <register name="R28" />
+        <register name="R29" />
+        <register name="R30" />
+        <register name="R31" />
+    </registers>
+
+    <registers name="io" address="0x0020" size="64">
+        <register address="0x0023" name="PINB" />
+        <register address="0x0024" name="DDRB" />
+        <register address="0x0025" name="PORTB" />
+
+        <register address="0x0026" name="PINC" />
+        <register address="0x0027" name="DDRC" />
+        <register address="0x0028" name="PORTC" />
+
+        <register address="0x0029" name="PIND" />
+        <register address="0x002A" name="DDRD" />
+        <register address="0x002B" name="PORTD" />
+
+        <register address="0x0035" name="TIFR0" >
+            <bit name="TOV0" />
+            <bit name="OCF0A" />
+            <bit name="OCF0B" />
+        </register>
+
+        <register address="0x0036" name="TIFR1" >
+            <bit name="TOV1" />
+            <bit name="OCF1A" />
+            <bit name="OCF1B" />
+            <bit name="ICF1" index="5"/>
+        </register>
+
+        <register address="0x0037" name="TIFR2" >
+            <bit name="TOV2" />
+            <bit name="OCF2A" />
+            <bit name="OCF2B" />
+        </register>
+
+        <register address="0x003B" name="PCIFR" >
+            <bit name="PCIF0" />
+            <bit name="PCIF1" />
+            <bit name="PCIF2" />
+        </register>
+
+        <register address="0x003C" name="EIFR" >
+            <bit name="INTF0" />
+            <bit name="INTF1" />
+        </register>
+
+        <register address="0x003D" name="EIMSK" >
+            <bit name="INT0" />
+            <bit name="INT1" />
+        </register>
+
+        <register address="0x003E" name="GPIOR0" />
+
+        <register address="0x003F" name="EECR">
+            <bit name="EERE" />
+            <bit name="EEPE" />
+            <bit name="EEMPE" />
+            <bit name="EERIE" />
+            <bit name="EEPM0" />
+            <bit name="EEPM1" />
+        </register>
+        <register address="0x0040" name ="EEDR" />
+        <register address="0x0041" name ="EEARL" />
+        <register address="0x0042" name ="EEARH" />
+
+        <register address="0x0043" name="GTCCR" >
+            <bit name="PSRSYNC" />
+            <bit name="PSRASY" />
+            <bit name="TSM" index="7" />
+        </register>
+
+        <register address="0x0044" name="TCCR0A" >
+            <bit name="WGM00"/>
+            <bit name="WGM01"/>
+            <bit name="COM0B0" index="4" />
+            <bit name="COM0B1" index="5" />
+            <bit name="COM0A0" index="6" />
+            <bit name="COM0A1" index="7" />
+        </register>
+
+        <register address="0x0045" name="TCCR0B" >
+            <bit name="CS00"/>
+            <bit name="CS01"/>
+            <bit name="CS02" />
+            <bit name="WGM02" />
+            <bit name="FOC0B" index="6" />
+            <bit name="FOC0A" index="7" />
+        </register>
+
+        <register address="0x0046" name="TCNT0" />
+        <register address="0x0047" name="OCR0A" />
+        <register address="0x0048" name="OCR0B" />
+
+        <register address="0x004A" name="GPIOR1" />
+        <register address="0x004B" name="GPIOR2" />
+
+        <register address="0x004C" name="SPCR" >
+            <bit name="SPR0" />
+            <bit name="SPR1" />
+            <bit name="CPHA" />
+            <bit name="CPOL" />
+            <bit name="MSTR" />
+            <bit name="DODR" />
+            <bit name="SPE" />
+            <bit name="SPIE" />
+        </register>
+        <register address="0x004D" name="SPSR" >
+            <bit name="SPI2X" />
+            <bit name="WCOL" index="6" />
+            <bit name="SPIF" index="7" />
+        </register>
+        <register address="0x004E" name="SPDR" />
+
+        <register address="0x0050" name="ACSR" >
+            <bit name="ACIS0" />
+            <bit name="ACIS1" />
+            <bit name="ACIC" />
+            <bit name="ACIE" />
+            <bit name="ACI" />
+            <bit name="ACO" />
+            <bit name="ACBG" />
+            <bit name="ACD" />
+        </register>
+
+        <register address="0x0053" name="SMCR" >
+            <bit name="SE" />
+            <bit name="SM0" />
+            <bit name="SM1" />
+            <bit name="SM2" />
+        </register>
+
+        <register address="0x0054" name="MCUSR" >
+            <bit name="PORF" />
+            <bit name="EXTRF" />
+            <bit name="BORF" />
+            <bit name="WDRF" />
+        </register>
+
+        <register address="0x0055" name="MCUCR" >
+            <bit name="IVCE" />
+            <bit name="IVSEL" />
+            <bit name="PUD" index="4" />
+        </register>
+
+        <register address="0x0057" name="SPMCSR" >
+            <bit name="SPEM" />
+            <bit name="PGERS" />
+            <bit name="PGWRT" />
+            <bit name="BLBSET" />
+            <bit name="RWWSRE" />
+            <bit name="SIGRD" />
+            <bit name="RWWSB" />
+            <bit name="SPMIE" />
+        </register>
+
+        <register address="0x005D" name="SPL" />
+        <register address="0x005E" name="SPH" mask="0b0000_111" />
+
+        <register address="0x005F" name="SREG" >
+            <bit name="C" />
+            <bit name="Z" />
+            <bit name="N" />
+            <bit name="V" />
+            <bit name="S" />
+            <bit name="H" />
+            <bit name="T" />
+            <bit name="I" />
+        </register>
+
+    </registers>
+
+    <registers name="extended_io" address="0X0060" size="160">
+    </registers>
+
+</part>
